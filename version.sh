@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Get instance name list and save
-INSTANCELIST=$(curl -s https://instances.mastodon.xyz/instances.json | jq -r '.[].name)
+INSTANCELIST=$(curl -s https://instances.mastodon.xyz/instances.json | jq -r '.[].name')
 
 for INSTANCE in $INSTANCELIST; do
   LINK="https://$INSTANCE/about/more"
