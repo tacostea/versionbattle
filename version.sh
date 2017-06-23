@@ -3,8 +3,8 @@
 function get_version() {
   DOMAIN=$1
   LINK="https://$DOMAIN/api/v1/instance"
-  VER_LAW=$(curl -m 10 -s $LINK | jq -r '.version')
-  VER=$(echo $VER_LAW | sed -r 's/.*>([0-9\.]+).*/\1/' | cut -c-5)
+  VER_RAW=$(curl -m 10 -s $LINK | jq -r '.version')
+  VER=$(echo $VER_RAW | sed -r 's/.*>([0-9\.]+).*/\1/' | cut -c-5)
   if [ -n "$VER" ]; then
     echo "$VER $DOMAIN"
   fi
