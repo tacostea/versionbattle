@@ -16,12 +16,12 @@ export -f get_version
 
 if [ -f instances.list ]; then
   mv results.list results.list.old
-  xargs -n1 -P10 -I % bash -c "get_version $INSTANCE %" < instances.list >> results.list
+  xargs -n1 -P5 -I % bash -c "get_version $INSTANCE %" < instances.list >> results.list
   sort -u results.list -o results.list
   sed -i "1s/^/$(LANG=C date)\n/" results.list
 else
   curl -s https://instances.mastodon.xyz/instances.json | jq -r '.[].name' > .instances.list
-  xargs -n1 -P10 -I % bash -c "get_version $INSTANCE %" < .instances.list
+  xargs -n1 -P5 -I % bash -c "get_version $INSTANCE %" < .instances.list
   rm -f .instances.list
 fi
 

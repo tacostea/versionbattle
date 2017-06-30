@@ -38,6 +38,12 @@ def update_version(uri, version):
 #      if rows != 4:
 #        raise Exception("Update Error")
 
+def parse_str(obj):
+  if obj is None:
+    return ""
+  else:
+    return str(obj)
+
 f = open('results.list')
 line = f.readline()
 line_num = 0
@@ -54,12 +60,12 @@ f.close
 f = open('table.html', 'w')
 get_all_table = db.prepare("SELECT uri,status,version,updated,users,statuses,connections,registrations,ipv6,delay FROM list")
 
-f.write("<table><tr><th>Instance</th><th>Status</th>Version<th>Updated</th><th>Users</th><th>Toots</th><th>Connections</th><th>Registrations</th><th>IPv6</th><th>Delay</th></tr>")
+f.write("<table id=\"listTable\" class=\"tablesorter\"><thead><tr><th>Instance</th><th>Status</th><th>Version</th><th>Updated</th><th>Users</th><th>Toots</th><th>Connections</th><th>Registrations</th><th>IPv6</th><th>Delay(s)</th></tr></thead><tbody>")
 
 with db.xact():
   for row in get_all_table():
-    f.write("<tr>" + row["uri"] + row["status"] + row["version"] + row["updated"] + row["users"] + row["statuses"] + row["connections"] + row["registrations"] + row["ipv6"] + row["delay"] + "</tr>")
-f.write("</table>")
+    f.write("<tr><td>" + parse_str(row["uri"]) + "</td><td>" + parse_str(row["status"]) + "</td><td>" + parse_str(row["version"]) + "</td><td>" + parse_str(row["updated"]) + "</td><td>" + parse_str(row["users"]) + "</td><td>" + parse_str(row["statuses"]) + "</td><td>" + parse_str(row["connections"]) + "</td><td>" + parse_str(row["registrations"]) + "</td><td>" + parse_str(row["ipv6"]) + "</td><td>" + parse_str(row["delay"]) + "</td></tr>")
+f.write("</tbody></table>")
 f.close
 
 #print(str(line_num) + " lines has been updated.")
