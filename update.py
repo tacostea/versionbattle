@@ -81,7 +81,7 @@ def divide_line(line, pattern):
     return None
 
 # update version info
-f = open('results.list')
+f = open('version.txt')
 line = f.readline()
 line_num = 0
 while line:
@@ -107,11 +107,12 @@ if path.exists('time.txt') :
     line = f.readline()
   f.close
 
+# update uptime info
 
 # write down table
 f = open('table.html', 'w')
 get_all_table = db.prepare("SELECT uri,status,version,updated,users,statuses,connections,registrations,ipv6,delay FROM list order by uri")
-f.write("<table id=\"listTable\" class=\"tablesorter\"><thead><tr><th>Instance</th><th>Status</th><th>Version</th><th>Updated</th><th>Users</th><th>Toots</th><th>Connections</th><th>Registrations</th><th>IPv6</th><th>Delay(s)</th></tr></thead><tbody>")
+f.write("<table id=\"listTable\" class=\"tablesorter\"><thead><tr><th>Instance</th><th>Status</th><th>Version</th><th>Updated</th><th>Users</th><th>Toots</th><th>Connections</th><th>Registrations</th><th>IPv6</th><th>Delay[ms]</th></tr></thead><tbody>")
 
 with db.xact():
   for row in get_all_table():
