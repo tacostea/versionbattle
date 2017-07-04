@@ -123,7 +123,6 @@ if path.exists('scrape.txt'):
   f=open('scrape.txt')
   line = f.readline()
   while line:
-    print(re.compile(", ").split(line))
     divided = divide_line(line, ",")
     if divided is not None:
       uri = divided[0]
