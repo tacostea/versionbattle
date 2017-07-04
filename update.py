@@ -1,6 +1,7 @@
 import re
 import postgresql
 import os.path as path
+import pdb
 
 pattern_version = r"^[0-9]+(\.[0-9]+){2}$"
 
@@ -59,10 +60,20 @@ def update_version(uri, version):
     return 0
 
 def update_delay(uri, delay):
-  update_list = db.prepare("UPDATE list SET delay = $2 where uri = $1")
+  update_list = db.prepare("UPDATE list SET delay = $2 WHERE uri = $1")
   with db.xact():
     rows = 0
     for row in update_list(uri, delay):
+      rows += 1
+    return 1
+  # postgresql exception
+  return 0
+
+def update_scraped(uri, users, statuses, connections, registration):
+  update_list = db.prepare("UPDATE list SET users = $2, statuses = $3, connections = $4, registration = $5  where uri = $1")
+  with db.xact():
+    rows = 0
+    for row in update_list(uri, users, statuses, connections, registration):
       rows += 1
     return 1
   # postgresql exception
@@ -107,16 +118,36 @@ if path.exists('time.txt') :
     line = f.readline()
   f.close
 
+# update scraped info
+if path.exists('scrape.txt'):
+  f=open('scrape.txt')
+  line = f.readline()
+  while line:
+    print(re.compile(", ").split(line))
+    divided = divide_line(line, ",")
+    if divided is not None:
+      uri = divided[0]
+      try:
+        users = int(re.sub(r'^$', '-1', divided[1].replace(' ', '').replace('.','')))
+        statuses = int(re.sub(r'^$', '-1', divided[2].replace(' ', '').replace('.','')))
+        connections = int(re.sub(r'^$', '-1', divided[3].replace(' ', '').replace('.','')))
+        registration = bool(divided[4].replace('\n', ''))
+      except:
+        pass
+      update_scraped(uri, users, statuses, connections, registration)
+    line = f.readline()
+  f.close
+
 # update uptime info
 
 # write down table
 f = open('table.html', 'w')
-get_all_table = db.prepare("SELECT uri,status,version,updated,users,statuses,connections,registrations,ipv6,delay FROM list order by uri")
-f.write("<table id=\"listTable\" class=\"tablesorter\"><thead><tr><th>Instance</th><th>Status</th><th>Version</th><th>Updated</th><th>Users</th><th>Toots</th><th>Connections</th><th>Registrations</th><th>IPv6</th><th>Delay[ms]</th></tr></thead><tbody>")
+get_all_table = db.prepare("SELECT uri,status,version,updated,users,statuses,connections,registration,ipv6,delay FROM list order by uri")
+f.write("<table id=\"listTable\" class=\"tablesorter\"><thead><tr><th>Instance</th><th>Status</th><th>Version</th><th>Updated</th><th>Users</th><th>Toots</th><th>Connections</th><th>Registration</th><th>IPv6</th><th>Delay[ms]</th></tr></thead><tbody>")
 
 with db.xact():
   for row in get_all_table():
-    f.write("<tr><td>" + parse_str(row["uri"]) + "</td><td>" + parse_str(row["status"]) + "</td><td>" + parse_str(row["version"]) + "</td><td>" + parse_str(row["updated"]) + "</td><td>" + parse_str(row["users"]) + "</td><td>" + parse_str(row["statuses"]) + "</td><td>" + parse_str(row["connections"]) + "</td><td>" + parse_str(row["registrations"]) + "</td><td>" + parse_str(row["ipv6"]) + "</td><td>" + parse_str(row["delay"]) + "</td></tr>")
+    f.write("<tr><td>" + parse_str(row["uri"]) + "</td><td>" + parse_str(row["status"]) + "</td><td>" + parse_str(row["version"]) + "</td><td>" + parse_str(row["updated"]) + "</td><td>" + parse_str(row["users"]) + "</td><td>" + parse_str(row["statuses"]) + "</td><td>" + parse_str(row["connections"]) + "</td><td>" + parse_str(row["registration"]) + "</td><td>" + parse_str(row["ipv6"]) + "</td><td>" + parse_str(row["delay"]) + "</td></tr>")
 f.write("</tbody></table>")
 f.close
 
