@@ -2,7 +2,7 @@
 
 ## CONFIG
 # MAX NUMBER OF PROCESSES FOR PARALLEL PROCESSING
-PROC=8
+PROC=6
 
 alias db="sudo -u postgres psql 1>/dev/null 2>/dev/null -U postgres -d instances -c "
 
@@ -85,7 +85,6 @@ function crawl() {
   fi
 }
 
-echo -n > error.txt
 echo -n > result.txt
 echo -n > scrape.txt
 

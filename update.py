@@ -46,14 +46,13 @@ def update_status_up(uri, status, version, delay, ipv6):
   if StrictVersion(get_version(uri)) != StrictVersion(version):
     update_list = db.prepare("UPDATE list SET status = $2, version = $3, delay = $4, ipv6 = $5, updated = now() WHERE uri = $1")
     insert_updates = db.prepare("INSERT INTO updates VALUES($1, now(), $2)") 
-    db.xact().insert_updates(uri, version)
+    with db.xact():
+      insert_updates(uri, version)
   else:
     update_list = db.prepare("UPDATE list SET status = $2, version = $3, delay = $4, ipv6 = $5 WHERE uri = $1")
 
   with db.xact():
-    rows = 0
-    for row in update_list(uri, status, version, delay, ipv6):
-      rows += 1
+    update_list(uri, status, version, delay, ipv6)
     return 1
   # postgresql exception
   return 0
