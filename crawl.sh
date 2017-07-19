@@ -2,7 +2,7 @@
 
 ## CONFIG
 # MAX NUMBER OF PROCESSES FOR PARALLEL PROCESSING
-PROC=5
+PROC=8
 
 alias db="sudo -u postgres psql 1>/dev/null 2>/dev/null -U postgres -d instances -c "
 
@@ -28,29 +28,26 @@ function scrape() {
 function crawl() {
   DOMAIN=$1
   LINK="https://$DOMAIN/api/v1/instance"
-  RESULT=$(curl -m 15 -k $LINK -w "\n%{time_total} %{http_code}" 2>/dev/null)
-  
+  RESULT=$(curl -m 15 -kL $LINK -w "\ntime=%{time_total} code=%{http_code}" 2>/dev/null)
+  CODE=$?
   VER_RAW=$(echo $RESULT | jq -r '.version' 2>/dev/null)
   VER=$(echo $VER_RAW | sed -r 's/.*>([0-9\.]+).*/\1/' | cut -c-5 2>/dev/null)
-  if [[ ! "$VER" =~ [0-9]+(\.[0-9]+){2} ]]; then
-    echo "$DOMAIN, ?.?.?" >> version.txt
-  else
-    echo "$DOMAIN, $VER" >> version.txt
-  fi
-
-  TIME=$(echo "$(echo $RESULT | sed -r 's/.*([0-9]+\.[0-9]+) ([0-9]{3}$)/\1/') * 1000" | bc)
-  STATUS=$(echo $RESULT | sed -r 's/.*([0-9]+\.[0-9]+) ([0-9]{3})$/\2/')
+  TIME=$(echo "$(echo $RESULT | grep "time=" | sed -r 's/.*time=([0-9]+\.[0-9]+) code=([0-9]{3}$)/\1/') * 1000" | bc)
+  STATUS=$(echo $RESULT |grep "time="| sed -r 's/.*time=([0-9]+\.[0-9]+) code=([0-9]{3})$/\2/')
   
   if [ "$STATUS" == "200" ]; then
-    # HTTP 202 OK の場合は time.txt に追加
     db "UPDATE list SET status = TRUE WHERE uri = '$DOMAIN'"
     scrape $DOMAIN
     echo "$DOMAIN, $TIME" >> time.txt
+    if [[ ! "$VER" =~ [0-9]+(\.[0-9]+){2} ]]; then
+      echo "$DOMAIN, ?.?.?" >> version.txt
+    else
+      echo "$DOMAIN, $VER" >> version.txt
+    fi
   else
-    # それ以外の場合はレスポンスコードを http_error.txt に追加してDBに反映
-    # ちなみに 000 => タイムアウト?
     db "UPDATE list SET delay = NULL, status = FALSE WHERE uri = '$DOMAIN'"
-    echo "$DOMAIN, $STATUS" >> http_error.txt
+#    echo "$DOMAIN, $STATUS" >> http_error.txt
+#    echo "$DOMAIN, Down" >> result.txt
   fi
 }
 
