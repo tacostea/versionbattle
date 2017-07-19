@@ -45,22 +45,18 @@ def update_status_up(uri, status, version, delay, ipv6):
   # if version are updated
   if StrictVersion(get_version(uri)) != StrictVersion(version):
     update_list = db.prepare("UPDATE list SET status = $2, version = $3, delay = $4, ipv6 = $5, updated = now() WHERE uri = $1")
+    insert_updates = db.prepare("INSERT INTO updates VALUES($1, now(), $2)") 
+    db.xact().insert_updates(uri, version)
   else:
     update_list = db.prepare("UPDATE list SET status = $2, version = $3, delay = $4, ipv6 = $5 WHERE uri = $1")
 
-  insert_updates = db.prepare("INSERT INTO updates VALUES($1, now(), $2)") 
-  if get_version(uri) == version or not re.compile(pattern_version).search(version) :
-    return 0
-  else: 
-    with db.xact():
-      rows = 0
-      for row in update_list(uri, status, version, delay, ipv6):
-        rows += 1
-      for row in insert_updates(uri, version):
-        rows += 1
-      return 1
-    # postgresql exception
-    return 0
+  with db.xact():
+    rows = 0
+    for row in update_list(uri, status, version, delay, ipv6):
+      rows += 1
+    return 1
+  # postgresql exception
+  return 0
 
 # if status is Down
 def update_status_down(uri, status):
@@ -134,11 +130,48 @@ if path.exists('scrape.txt'):
 # write down table
 f = open('table.html', 'w')
 get_all_table = db.prepare("SELECT uri,status,version,updated,users,statuses,connections,registration,ipv6,delay FROM list order by uri")
-f.write("<table id=\"listTable\" class=\"tablesorter\"><thead><tr><th>Instance</th><th>Status</th><th>Version</th><th>Updated</th><th>Users</th><th>Toots</th><th>Connections</th><th>Registration</th><th>IPv6</th><th>Delay[ms]</th></tr></thead><tbody>")
+f.write("<table id=\"listTable\" class=\"tablesorter\"><thead><tr><th>Instance</th><th>Status</th><th>Version</th><th>Version Updated</th><th>Users</th><th>Toots</th><th>Connections</th><th>Registration</th><th>IPv6</th><th>Delay[ms]</th></tr></thead><tbody>")
 
 with db.xact():
   for row in get_all_table():
-    f.write("<tr><td>" + parse_str(row["uri"]) + "</td><td>" + parse_str(row["status"]) + "</td><td>" + parse_str(row["version"]) + "</td><td>" + parse_str(row["updated"]) + "</td><td>" + parse_str(row["users"]) + "</td><td>" + parse_str(row["statuses"]) + "</td><td>" + parse_str(row["connections"]) + "</td><td>" + parse_str(row["registration"]) + "</td><td>" + parse_str(row["ipv6"]) + "</td><td>" + parse_str(row["delay"]) + "</td></tr>")
+    if row["registration"] == True:
+      registration = 'Open'
+    else:
+      registration = 'Close'
+    if row["status"] == True:
+      status = 'Up'
+    else:
+      status = 'Down'
+    if row["version"] == '0.0.0':
+      version = ''
+    else:
+      version = parse_str(row["version"])
+    if row["users"] == -1:
+      users = ''
+    else:
+      users = parse_str(row["users"])
+    if row["statuses"] == -1:
+      statuses = ''
+    else:
+      statuses = parse_str(row["statuses"])
+    if row["connections"] == -1:
+      connections = ''
+    else:
+      connections = parse_str(row["connections"])
+      
+
+    f.write("<tr><td>" 
+    + parse_str(row["uri"]) + "</td><td>" 
+    + status + "</td><td>" 
+    + version + "</td><td>" 
+    + parse_str(row["updated"]) + "</td><td>" 
+    + users + "</td><td>" 
+    + statuses + "</td><td>" 
+    + connections + "</td><td>" 
+    + registration + "</td><td>" 
+    + parse_str(row["ipv6"]) + "</td><td>" 
+    + parse_str(row["delay"]) + "</td></tr>"
+    )
 f.write("</tbody></table>")
 f.close
 

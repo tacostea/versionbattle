@@ -2,7 +2,7 @@
 
 ## CONFIG
 # MAX NUMBER OF PROCESSES FOR PARALLEL PROCESSING
-PROC=0
+PROC=8
 
 alias db="sudo -u postgres psql 1>/dev/null 2>/dev/null -U postgres -d instances -c "
 
@@ -64,6 +64,7 @@ function crawl() {
     STATUS=$(echo $RESULT |grep "time="| sed -r 's/.*time=([0-9]+\.[0-9]+) code=([0-9]{3})$/\2/')
     # pass v4 only
     if [ "$STATUS" == "200" ]; then
+      scrape $DOMAIN
       if [[ ! "$VER" =~ [0-9]+(\.[0-9]+){2} ]]; then
         if [ "$CODE" != "6" ]; then
           echo "$DOMAIN, Up, 0.0.0, $TIME, v4/ex" >> result.txt
