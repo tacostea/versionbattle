@@ -2,6 +2,8 @@ import re
 import postgresql
 import os.path as path
 import pdb
+from distutils.version import StrictVersion
+
 
 pattern_version = r"^[0-9]+(\.[0-9]+){2}$"
 
@@ -26,32 +28,33 @@ def get_version(uri):
     rows = 0
     for row in get_list(uri):
       rows += 1
-    if rows == 1:
+    if (rows == 1) and (row["version"] is not None):
       return row["version"]
     else:
-      return None
+      return '0.0'
 
 def insert_uri(uri):
   insert_list = db.prepare("INSERT INTO list(uri) VALUES($1)")
   insert_list.first(uri)
 
-def update_status(uri, status):
-  None
-
-def update_version(uri, version):
-
+# if status is Up
+def update_status_up(uri, status, version, delay, ipv6):
   if get_exsistence(uri) != 1:
     insert_uri(uri)
-  # update up status
 
-  update_list = db.prepare("UPDATE list SET version = $2, updated = now() where uri = $1")
+  # if version are updated
+  if StrictVersion(get_version(uri)) != StrictVersion(version):
+    update_list = db.prepare("UPDATE list SET status = $2, version = $3, delay = $4, ipv6 = $5, updated = now() WHERE uri = $1")
+  else:
+    update_list = db.prepare("UPDATE list SET status = $2, version = $3, delay = $4, ipv6 = $5 WHERE uri = $1")
+
   insert_updates = db.prepare("INSERT INTO updates VALUES($1, now(), $2)") 
   if get_version(uri) == version or not re.compile(pattern_version).search(version) :
     return 0
   else: 
     with db.xact():
       rows = 0
-      for row in update_list(uri, version):
+      for row in update_list(uri, status, version, delay, ipv6):
         rows += 1
       for row in insert_updates(uri, version):
         rows += 1
@@ -59,18 +62,15 @@ def update_version(uri, version):
     # postgresql exception
     return 0
 
-def update_delay(uri, delay):
-  update_list = db.prepare("UPDATE list SET delay = $2 WHERE uri = $1")
-  with db.xact():
-    rows = 0
-    for row in update_list(uri, delay):
-      rows += 1
-    return 1
-  # postgresql exception
-  return 0
+# if status is Down
+def update_status_down(uri, status):
+  if get_exsistence(uri) != 1:
+    insert_uri(uri)
+  update_list = db.prepare("UPDATE list SET status = $2 WHERE uri = $1")
+  return 1
 
 def update_scraped(uri, users, statuses, connections, registration):
-  update_list = db.prepare("UPDATE list SET users = $2, statuses = $3, connections = $4, registration = $5  where uri = $1")
+  update_list = db.prepare("UPDATE list SET users = $2, statuses = $3, connections = $4, registration = $5 WHERE uri = $1")
   with db.xact():
     rows = 0
     for row in update_list(uri, users, statuses, connections, registration):
@@ -91,32 +91,24 @@ def divide_line(line, pattern):
   else:
     return None
 
-# update version info
-f = open('version.txt')
+# update instance info from result.txt
+f = open('result.txt')
 line = f.readline()
 line_num = 0
 while line:
   divided = divide_line(line, ", ")
   if divided is not None:
-    uri=divided[0]
-    version=divided[1]
-    line_num += update_version(uri, version)
+    uri = divided[0]
+    status = divided[1]
+    if status == 'Up':
+      version = divided[2]
+      delay = float(divided[3])
+      ipv6 = divided[4].strip()
+      line_num += update_status_up(uri, True, version, delay, ipv6)
+    else:
+      line_num += update_status_down(uri, False)
   line = f.readline()
 f.close
-
-# update delay info
-if path.exists('time.txt') :
-  f = open('time.txt')
-  line = f.readline()
-  line_num = 0
-  while line:
-    divided = divide_line(line, ", ")
-    if divided is not None:
-      uri = divided[0]
-      delay = float(divided[1])
-      line_num += update_delay(uri, delay)
-    line = f.readline()
-  f.close
 
 # update scraped info
 if path.exists('scrape.txt'):

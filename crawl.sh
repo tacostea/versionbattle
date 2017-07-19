@@ -2,7 +2,7 @@
 
 ## CONFIG
 # MAX NUMBER OF PROCESSES FOR PARALLEL PROCESSING
-PROC=8
+PROC=0
 
 alias db="sudo -u postgres psql 1>/dev/null 2>/dev/null -U postgres -d instances -c "
 
@@ -28,32 +28,64 @@ function scrape() {
 function crawl() {
   DOMAIN=$1
   LINK="https://$DOMAIN/api/v1/instance"
-  RESULT=$(curl -m 15 -kL $LINK -w "\ntime=%{time_total} code=%{http_code}" 2>/dev/null)
+  RESULT=$(curl -6 -m 15 -kL $LINK -w "\ntime=%{time_total} code=%{http_code}" 2>/dev/null)
   CODE=$?
   VER_RAW=$(echo $RESULT | jq -r '.version' 2>/dev/null)
   VER=$(echo $VER_RAW | sed -r 's/.*>([0-9\.]+).*/\1/' | cut -c-5 2>/dev/null)
   TIME=$(echo "$(echo $RESULT | grep "time=" | sed -r 's/.*time=([0-9]+\.[0-9]+) code=([0-9]{3}$)/\1/') * 1000" | bc)
   STATUS=$(echo $RESULT |grep "time="| sed -r 's/.*time=([0-9]+\.[0-9]+) code=([0-9]{3})$/\2/')
   
+  # pass v6
   if [ "$STATUS" == "200" ]; then
-    db "UPDATE list SET status = TRUE WHERE uri = '$DOMAIN'"
+    RESULT=$(curl -4 -m 15 -kL $LINK -w "\ntime=%{time_total} code=%{http_code}" 2>/dev/null)
+    STATUS=$(echo $RESULT |grep "time="| sed -r 's/.*time=([0-9]+\.[0-9]+) code=([0-9]{3})$/\2/')
     scrape $DOMAIN
-    echo "$DOMAIN, $TIME" >> time.txt
-    if [[ ! "$VER" =~ [0-9]+(\.[0-9]+){2} ]]; then
-      echo "$DOMAIN, ?.?.?" >> version.txt
+    # pass v4/v6
+    if [ "$STATUS" == "200" ]; then
+      if [[ ! "$VER" =~ [0-9]+(\.[0-9]+){2} ]]; then
+        echo "$DOMAIN, Up, 0.0.0, $TIME, v4/v6" >> result.txt
+      else
+        echo "$DOMAIN, Up, $VER, $TIME, v4/v6" >> result.txt
+      fi
+    # pass v6 only
     else
-      echo "$DOMAIN, $VER" >> version.txt
+      if [[ ! "$VER" =~ [0-9]+(\.[0-9]+){2} ]]; then
+        echo "$DOMAIN, Up, 0.0.0, $TIME, v6" >> result.txt
+      else
+        echo "$DOMAIN, Up, $VER, $TIME, v6" >> result.txt
+      fi
     fi
+  # cannot pass v6
   else
-    db "UPDATE list SET delay = NULL, status = FALSE WHERE uri = '$DOMAIN'"
-#    echo "$DOMAIN, $STATUS" >> http_error.txt
-#    echo "$DOMAIN, Down" >> result.txt
+    RESULT=$(curl -4 -m 15 -kL $LINK -w "\ntime=%{time_total} code=%{http_code}" 2>/dev/null)
+    VER_RAW=$(echo $RESULT | jq -r '.version' 2>/dev/null)
+    VER=$(echo $VER_RAW | sed -r 's/.*>([0-9\.]+).*/\1/' | cut -c-5 2>/dev/null)
+    TIME=$(echo "$(echo $RESULT | grep "time=" | sed -r 's/.*time=([0-9]+\.[0-9]+) code=([0-9]{3}$)/\1/') * 1000" | bc)
+    STATUS=$(echo $RESULT |grep "time="| sed -r 's/.*time=([0-9]+\.[0-9]+) code=([0-9]{3})$/\2/')
+    # pass v4 only
+    if [ "$STATUS" == "200" ]; then
+      if [[ ! "$VER" =~ [0-9]+(\.[0-9]+){2} ]]; then
+        if [ "$CODE" != "6" ]; then
+          echo "$DOMAIN, Up, 0.0.0, $TIME, v4/ex" >> result.txt
+        else
+          echo "$DOMAIN, Up, 0.0.0, $TIME, v4" >> result.txt
+        fi
+      else
+        if [ "$CODE" != "6" ]; then
+          echo "$DOMAIN, Up, $VER, $TIME, v4/ex" >> result.txt
+        else
+          echo "$DOMAIN, Up, $VER, $TIME, v4" >> result.txt
+        fi  
+      fi
+    # cannot connect
+    else
+      echo "$DOMAIN, Down, $STATUS" >> result.txt
+    fi
   fi
 }
 
-echo -n > version.txt
-echo -n > time.txt
-echo -n > http_error.txt
+echo -n > error.txt
+echo -n > result.txt
 echo -n > scrape.txt
 
 export -f crawl
