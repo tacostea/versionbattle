@@ -1,13 +1,23 @@
 import re
+import time
 import postgresql
 import os.path as path
 import pdb
-from distutils.version import StrictVersion
+# CHANGE LIBRALY
+import psycopg2
+import psycopg2.extras
 
+from distutils.version import StrictVersion
+from mastodon import Mastodon
 
 pattern_version = r"^[0-9]+(\.[0-9]+){2}$"
 
 db = postgresql.open("pq://postgres@localhost/instances")
+mastodon = Mastodon(
+    client_id = 'pytooter_clientcred.secret',
+    access_token = 'pytooter_usercred.secret',
+    api_base_url = 'https://don.tacostea.net'
+    )
 
 def get_watching_uri():
   get_list = db.prepare("SELECT uri FROM list")
@@ -21,7 +31,6 @@ def get_exsistence(uri):
     for row in get_list( uri ):
       return row[0]
 
-
 def get_version(uri):
   get_list = db.prepare("SELECT version FROM list WHERE uri = $1")
   with db.xact():
@@ -31,9 +40,19 @@ def get_version(uri):
     if (rows == 1) and (row["version"] is not None):
       return row["version"]
     else:
-      return '0.0'
+      return '0.0.0'
+def get_mean_delay(uri, delay):
+  get_list = db.prepare('SELECT delay FROM list WHERE uri = $1')
+  with db.xtact():
+    result = get_list(uri)
+    if result is not None:
+      return (delay + result['delay']) / 2
+    else:
+      return None
 
 def insert_uri(uri):
+  if uri is None or uri == '':
+    return
   insert_list = db.prepare("INSERT INTO list(uri) VALUES($1)")
   insert_list.first(uri)
 
@@ -41,28 +60,26 @@ def insert_uri(uri):
 def update_status_up(uri, status, version, delay, ipv6):
   if get_exsistence(uri) != 1:
     insert_uri(uri)
-
   # if version are updated
-  if StrictVersion(get_version(uri)) != StrictVersion(version):
+  old = get_version(uri).strip()
+  print(uri, old, version)
+  if old != version and version is not None:
+    print(uri + ', ' + old + ' -> ' + version)
+    mastodon.toot('[ Version Updated! ]\n' + uri + ' : '+ old + ' -> ' + version + '\n#Mastodon_Upgrade_Battle')
     update_list = db.prepare("UPDATE list SET status = $2, version = $3, delay = $4, ipv6 = $5, updated = now() WHERE uri = $1")
     insert_updates = db.prepare("INSERT INTO updates VALUES($1, now(), $2)") 
-    with db.xact():
-      insert_updates(uri, version)
+    insert_updates(uri, version)
   else:
     update_list = db.prepare("UPDATE list SET status = $2, version = $3, delay = $4, ipv6 = $5 WHERE uri = $1")
-
-  with db.xact():
-    update_list(uri, status, version, delay, ipv6)
-    return 1
-  # postgresql exception
-  return 0
+  
+  update_list(uri, status, version, delay, ipv6)
 
 # if status is Down
 def update_status_down(uri, status):
   if get_exsistence(uri) != 1:
     insert_uri(uri)
   update_list = db.prepare("UPDATE list SET status = $2 WHERE uri = $1")
-  return 1
+  update_list(uri, status)
 
 def update_scraped(uri, users, statuses, connections, registration):
   update_list = db.prepare("UPDATE list SET users = $2, statuses = $3, connections = $4, registration = $5 WHERE uri = $1")
@@ -89,20 +106,20 @@ def divide_line(line, pattern):
 # update instance info from result.txt
 f = open('result.txt')
 line = f.readline()
-line_num = 0
 while line:
   divided = divide_line(line, ", ")
-  if divided is not None:
+  if divided is not None and len(divided) > 4:
     uri = divided[0]
     status = divided[1]
     if status == 'Up':
-      version = divided[2]
+      version = divided[2].strip() if divided[2].strip() != '0.0.0' else None
       delay = float(divided[3])
       ipv6 = divided[4].strip()
-      line_num += update_status_up(uri, True, version, delay, ipv6)
+      update_status_up(uri, True, version, delay, ipv6)
     else:
-      line_num += update_status_down(uri, False)
+      update_status_down(uri, False)
   line = f.readline()
+  time.sleep(0.01)
 f.close
 
 # update scraped info
@@ -129,35 +146,29 @@ if path.exists('scrape.txt'):
 # write down table
 f = open('table.html', 'w')
 get_all_table = db.prepare("SELECT uri,status,version,updated,users,statuses,connections,registration,ipv6,delay FROM list order by uri")
-f.write("<table id=\"listTable\" class=\"tablesorter\"><thead><tr><th>Instance</th><th>Status</th><th>Version</th><th>Version Updated</th><th>Users</th><th>Toots</th><th>Connections</th><th>Registration</th><th>IPv6</th><th>Delay[ms]</th></tr></thead><tbody>")
+f.write('<table id=\"listTable\" class=\"tablesorter\"><thead><tr>\
+<th>Instance</th>\
+<th>Status</th>\
+<th>Version</th>\
+<th>Version Updated</th>\
+<th>Users</th>\
+<th>Toots</th>\
+<th>Connections</th>\
+<th>Registration</th>\
+<th>IPv6</th>\
+<th>Delay[ms]</th>\
+<th>Uptime[%]</th>\
+<th>SSL</th>\
+</tr></thead><tbody>')
 
 with db.xact():
   for row in get_all_table():
-    if row["registration"] == True:
-      registration = 'Open'
-    else:
-      registration = 'Close'
-    if row["status"] == True:
-      status = 'Up'
-    else:
-      status = 'Down'
-    if row["version"] == '0.0.0':
-      version = ''
-    else:
-      version = parse_str(row["version"])
-    if row["users"] == -1:
-      users = ''
-    else:
-      users = parse_str(row["users"])
-    if row["statuses"] == -1:
-      statuses = ''
-    else:
-      statuses = parse_str(row["statuses"])
-    if row["connections"] == -1:
-      connections = ''
-    else:
-      connections = parse_str(row["connections"])
-      
+    registration = 'Open' if row['registration'] == True else 'Close'
+    status = 'Up' if row['status'] == True else 'Down'
+    version = '' if row["version"] == '0.0.0' else parse_str(row["version"])
+    users = '' if row["users"] == -1 else parse_str(row["users"])
+    statuses = '' if row["statuses"] == -1 else parse_str(row["statuses"])
+    connections = '' if row["connections"] == -1 else parse_str(row["connections"])
 
     f.write("<tr><td>" 
     + parse_str(row["uri"]) + "</td><td>" 
@@ -169,9 +180,9 @@ with db.xact():
     + connections + "</td><td>" 
     + registration + "</td><td>" 
     + parse_str(row["ipv6"]) + "</td><td>" 
-    + parse_str(row["delay"]) + "</td></tr>"
+    + parse_str(row["delay"]) + "</td><td>"
+    + "</td><td>"
+    + "</td></tr>"
     )
 f.write("</tbody></table>")
 f.close
-
-#print(str(line_num) + " lines has been updated.")
