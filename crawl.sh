@@ -17,10 +17,23 @@ function scrape() {
   fi
 
   LINK="https://$DOMAIN/about/more"
+  API_LINK="https://$DOMAIN/api/v1/instance"
+
   RESULT=$(curl -m 5 -k $LINK 2>/dev/null)
-  USERS=$(echo $RESULT | xmllint --html --xpath "/html/body/div/div/div[1]/div[2]/div[1]/strong" - 2>/dev/null | sed -e 's/<[^>]*>//g' | sed -e 's/[, ]//')
-  STATUSES=$(echo $RESULT | xmllint --html --xpath "/html/body/div/div/div[1]/div[2]/div[2]/strong" - 2>/dev/null | sed -e 's/<[^>]*>//g' | sed -e 's/[, ]//')
-  CONNS=$(echo $RESULT | xmllint --html --xpath "/html/body/div/div/div[1]/div[2]/div[3]/strong" - 2>/dev/null | sed -e 's/<[^>]*>//g' | sed -e 's/[, ]//')
+  API_RESULT=$(curl -m 5 -kL $API_LINK -w "\ntime=%{time_total} code=%{http_code}" 2>/dev/null)
+  
+  INSTANCE_FULL_VER=$(echo $API_RESULT | jq -r '.version' 2>/dev/null)
+  if [[ $INSTANCE_FULL_VER =~ ^([0-9]+\.[0-9]+)\.([0-9]+) ]]; then INSTANCE_SIMPLE_VER=${BASH_REMATCH[1]}; fi
+  
+  if [[ $INSTANCE_SIMPLE_VER < 1.5 ]] ; then
+    USERS=$(echo $RESULT | xmllint --html --xpath "/html/body/div/div/div[1]/div[2]/div[1]/strong" - 2>/dev/null | sed -e 's/<[^>]*>//g' | sed -e 's/[, ]//')
+    STATUSES=$(echo $RESULT | xmllint --html --xpath "/html/body/div/div/div[1]/div[2]/div[2]/strong" - 2>/dev/null | sed -e 's/<[^>]*>//g' | sed -e 's/[, ]//')
+    CONNS=$(echo $RESULT | xmllint --html --xpath "/html/body/div/div/div[1]/div[2]/div[3]/strong" - 2>/dev/null | sed -e 's/<[^>]*>//g' | sed -e 's/[, ]//')
+  else
+    USERS=$(echo $RESULT | xmllint --html --xpath "/html/body/div/div[2]/div/div[1]/div[1]/strong" - 2>/dev/null | sed -e 's/<[^>]*>//g' | sed -e 's/[, ]//')
+    STATUSES=$(echo $RESULT | xmllint --html --xpath "/html/body/div/div[2]/div/div[1]/div[2]/strong" - 2>/dev/null | sed -e 's/<[^>]*>//g' | sed -e 's/[, ]//')
+    CONNS=$(echo $RESULT | xmllint --html --xpath "/html/body/div/div[2]/div/div[1]/div[3]/strong" - 2>/dev/null | sed -e 's/<[^>]*>//g' | sed -e 's/[, ]//')
+  fi
 
   echo "$DOMAIN, $USERS, $STATUSES, $CONNS, $REG" >> "scrape.txt"
 }
