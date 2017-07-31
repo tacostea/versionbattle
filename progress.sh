@@ -16,5 +16,6 @@ while [ $(echo "$P < 100"|bc) -eq 1 ]; do
   wc -l instances.list
   echo -e "\033[5A\r"
   sleep 1
+  #usleep 300000
 done
 echo -e "\033[3B"

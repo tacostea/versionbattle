@@ -43,12 +43,12 @@ def get_version(uri):
       return '0.0.0'
 def get_mean_delay(uri, delay):
   get_list = db.prepare('SELECT delay FROM list WHERE uri = $1')
-  with db.xtact():
-    result = get_list(uri)
-    if result is not None:
-      return (delay + result['delay']) / 2
-    else:
-      return None
+  with db.xact():
+    for result in get_list(uri):
+      if result['delay'] is not None:
+        return round((delay + float(result['delay'])) / 2, 3)
+      else:
+        return None
 
 def insert_uri(uri):
   if uri is None or uri == '':
@@ -60,11 +60,11 @@ def insert_uri(uri):
 def update_status_up(uri, status, version, delay, ipv6):
   if get_exsistence(uri) != 1:
     insert_uri(uri)
+  delay = get_mean_delay(uri, delay)
   # if version are updated
   old = get_version(uri).strip()
-  print(uri, old, version)
+  if old == '0.0.0' : old = ''
   if old != version and version is not None:
-    print(uri + ', ' + old + ' -> ' + version)
     mastodon.toot('[ Version Updated! ]\n' + uri + ' : '+ old + ' -> ' + version + '\n#Mastodon_Upgrade_Battle')
     update_list = db.prepare("UPDATE list SET status = $2, version = $3, delay = $4, ipv6 = $5, updated = now() WHERE uri = $1")
     insert_updates = db.prepare("INSERT INTO updates VALUES($1, now(), $2)") 
@@ -109,7 +109,8 @@ line = f.readline()
 while line:
   divided = divide_line(line, ", ")
   if divided is not None and len(divided) > 4:
-    uri = divided[0]
+    uri = parse_str(divided[0])
+    if not re.match(r".+\..+", uri): continue
     status = divided[1]
     if status == 'Up':
       version = divided[2].strip() if divided[2].strip() != '0.0.0' else None
@@ -146,20 +147,6 @@ if path.exists('scrape.txt'):
 # write down table
 f = open('table.html', 'w')
 get_all_table = db.prepare("SELECT uri,status,version,updated,users,statuses,connections,registration,ipv6,delay FROM list order by uri")
-f.write('<table id=\"listTable\" class=\"tablesorter\"><thead><tr>\
-<th>Instance</th>\
-<th>Status</th>\
-<th>Version</th>\
-<th>Version Updated</th>\
-<th>Users</th>\
-<th>Toots</th>\
-<th>Connections</th>\
-<th>Registration</th>\
-<th>IPv6</th>\
-<th>Delay[ms]</th>\
-<th>Uptime[%]</th>\
-<th>SSL</th>\
-</tr></thead><tbody>')
 
 with db.xact():
   for row in get_all_table():
@@ -169,20 +156,20 @@ with db.xact():
     users = '' if row["users"] == -1 else parse_str(row["users"])
     statuses = '' if row["statuses"] == -1 else parse_str(row["statuses"])
     connections = '' if row["connections"] == -1 else parse_str(row["connections"])
+    delay = '' if row["delay"] is None else parse_str(round(row["delay"], 1))
 
     f.write("<tr><td>" 
     + parse_str(row["uri"]) + "</td><td>" 
     + status + "</td><td>" 
     + version + "</td><td>" 
-    + parse_str(row["updated"]) + "</td><td>" 
+    + parse_str(row["updated"]).split('.')[0] + "</td><td>" 
     + users + "</td><td>" 
     + statuses + "</td><td>" 
     + connections + "</td><td>" 
     + registration + "</td><td>" 
     + parse_str(row["ipv6"]) + "</td><td>" 
-    + parse_str(row["delay"]) + "</td><td>"
+    + delay + "</td><td>"
     + "</td><td>"
-    + "</td></tr>"
+    + "</td></tr>\n"
     )
-f.write("</tbody></table>")
 f.close

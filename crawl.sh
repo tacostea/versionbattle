@@ -2,7 +2,7 @@
 
 ## CONFIG
 # MAX NUMBER OF PROCESSES FOR PARALLEL PROCESSING
-PROC=4
+PROC=6
 
 alias db="sudo -u postgres psql 1>/dev/null 2>/dev/null -U postgres -d instances -c "
 
@@ -31,13 +31,10 @@ function crawl() {
   LINK="https://$DOMAIN/api/v1/instance"
   RESULT=$(curl -6 -m 5 -kL $LINK -w "\ntime=%{time_total} code=%{http_code}" 2>/dev/null)
   CODE=$?
-  VER_RAW=$(echo $RESULT | jq -r '.version' 2>/dev/null)
-#  VER=$(echo $VER_RAW | sed -r 's/.*>([0-9\.]+).*/\1/' 2>/dev/null)
-  VER=$VER_RAW
+  VER=$(echo $RESULT | jq -r '.version' 2>/dev/null)
   TIME=$(echo "$(echo $RESULT | grep "time=" | sed -r 's/.*time=([0-9]+\.[0-9]+) code=([0-9]{3}$)/\1/') * 1000" | bc)
   STATUS=$(echo $RESULT |grep "time="| sed -r 's/.*time=([0-9]+\.[0-9]+) code=([0-9]{3})$/\2/')
   
-  echo "$DOMAIN, $STATUS, $TIME, $VER"
   # pass v6
   if [ "$STATUS" == "200" ]; then
     RESULT=$(curl -4 -m 5 -kL $LINK -w "\ntime=%{time_total} code=%{http_code}" 2>/dev/null)
@@ -61,9 +58,7 @@ function crawl() {
   # cannot pass v6
   else
     RESULT=$(curl -4 -m 5 -kL $LINK -w "\ntime=%{time_total} code=%{http_code}" 2>/dev/null)
-    VER_RAW=$(echo $RESULT | jq -r '.version' 2>/dev/null)
-    VER=$VER_RAW
-    #VER=$(echo $VER_RAW | sed -r 's/.*>([0-9\.]+).*/\1/' | cut -c-5 2>/dev/null)
+    VER=$(echo $RESULT | jq -r '.version' 2>/dev/null)
     TIME=$(echo "$(echo $RESULT | grep "time=" | sed -r 's/.*time=([0-9]+\.[0-9]+) code=([0-9]{3}$)/\1/') * 1000" | bc)
     STATUS=$(echo $RESULT |grep "time="| sed -r 's/.*time=([0-9]+\.[0-9]+) code=([0-9]{3})$/\2/')
     # pass v4 only
