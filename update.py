@@ -116,6 +116,7 @@ while line:
       version = divided[2].strip() if divided[2].strip() != '0.0.0' else None
       delay = float(divided[3])
       ipv6 = divided[4].strip()
+      if not re.match(r".*[0-9x]$", ipv6): continue
       update_status_up(uri, True, version, delay, ipv6)
     else:
       update_status_down(uri, False)
