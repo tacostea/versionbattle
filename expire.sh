@@ -2,6 +2,7 @@
 
 chmod a+x ssl-exp.txt
 echo -n > ssl-exp.txt
+echo -n > ~err.txt
 
 for DOMAIN in $(cat instances.list); do
   unset END
@@ -14,7 +15,7 @@ for DOMAIN in $(cat instances.list); do
       echo "$ENDF $DOMAIN" >> ssl-exp.txt
     fi
   else
-    echo $DOMAIN >> err.txt
+    echo $DOMAIN >> ~err.txt
   fi
 done
 

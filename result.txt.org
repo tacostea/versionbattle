@@ -1,0 +1,1525 @@
+15m.icolectiva.org, Up, 1.3.2, 1704.000, v4
+3.nu, Up, 1.3.2, 269.000, v4
+39sounds.net, Up, 1.5.1, 494.000, v4/v6
+3dcgdon.net, Down, 000
+4com.jp, Up, 0.0.0, 349.000, v4
+575don.club, Up, 1.4.7, 412.000, v4
+7144.party, Up, 1.4.6, 443.000, v4/v6
+765ml.com, Up, 1.3.3, 888.000, v4
+7pm.org, Down, 404
+88.om, Down, 000
+a.weirder.earth, Up, 0.0.0, 1839.000, v4
+ablative.stream, Up, 0.0.0, 1746.000, v4/ex
+acab.land, Down, 000
+acg.mn, Up, 1.5.1, 590.000, v4/v6
+admins.mstdn.social, Down, 000
+adney.land, Up, 1.5.1, 792.000, v4/v6
+aidon.club, Up, 1.5.1, 888.000, v4
+aigisdon.net, Up, 1.4.7, 950.000, v4
+akiba.tokyo.jp, Up, 0.0.0, 266.000, v4
+akibadon.com, Down, 000
+akibaoh.tech, Up, 1.3.2, 319.000, v4
+akitadon.info, Up, 1.5.1, 343.000, v4
+aleph.land, Up, 1.5.1, 1566.000, v4
+algerietelecom.org, Up, 1.4.0.6, 1153.000, v4
+amefootdon.com, Down, 000
+amicale.net, Up, 1.5.1, 1418.000, v4/v6
+amnz.jp, Up, 1.4.1, 231.000, v4/ex
+angel.innolan.net, Up, 1.4.7, 1677.000, v4
+animalliberation.social, Up, 0.0.0, 1127.000, v4/ex
+anime.country, Down, 000
+anime.mstdn.cloud, Up, 1.3.2, 257.000, v4
+animedon.tk, Up, 1.6.0rc4, 220.000, v4
+anitwitter.com, Down, 000
+anitwitter.moe, Up, 1.4.6, 1059.000, v4
+anti.energy, Up, 1.4.7, 1151.000, v4
+anticapitalist.party, Up, 1.5.1, 1113.000, v4/v6
+antisocial.narinimous.fr, Up, 1.5.1, 1643.000, v4
+apoil.org, Up, 1.3.3, 1412.000, v4/v6
+aqua-graphic.blue, Up, 1.5.1, 321.000, v4
+aruk.as, Up, 1.6.0rc2, 349.000, v4/ex
+ashikaga.link, Up, 1.3.3, 344.000, v4
+astdn.tokyo, Down, 000
+asukuru.com, Up, 0.0.0, 318.000, v4/ex
+atomicfridge.net, Up, 1.3.3, 1349.000, v4/v6
+atxcoop.club, Down, 000
+audiophile-mastodon.com, Down, 500
+august-don.site, Up, 1.6.0rc4, 271.000, v4
+avidol.jp, Up, 1.5.1, 319.000, v4
+awoo.space, Up, 1.5.1, 1470.000, v4
+babuu.club, Up, 1.4.7, 254.000, v4
+babymetal.party, Up, 1.6.0rc2, 217.000, v4
+bagels.pizza, Up, 0.0.0, 1193.000, v4
+band-mastdn.tokyo, Up, 1.2.2, 185.000, v4
+banthamilk.blue, Up, 1.5.1, 1397.000, v4/v6
+bapp.me, Up, 0.0.0, 2631.000, v4/v6
+baraag.net, Up, 1.5.1, 1549.000, v4/v6
+bark.zer0xff.com, Down, 502
+basstdn.jp, Up, 1.3.3, 501.000, v4/v6
+bcn-users.degica.com, Up, 1.5.1, 233.000, v4
+beerbeer.tokyo, Down, 404
+betterletter.io, Up, 1.3.2, 998.000, v4
+bibeogaem.zone, Up, 1.5.1, 1406.000, v4
+big.tuxme.net, Up, 0.0.0, 1815.000, v4
+bitcoinadon.social, Up, 0.0.0, 1454.000, v4
+biwakodon.com, Up, 1.5.1, 834.000, v4/v6
+blackice.online, Up, 1.3.3, 451.000, v4
+bldon.net, Down, 000
+bleepbloop.club, Up, 1.4.1, 786.000, v4
+blogs.jp, Down, 000
+bms.stoicsounds.jp, Down, 000
+bne.social, Up, 1.4.3, 1337.000, v4
+boitam.eu, Up, 1.5.0, 2062.000, v4
+bonn.social, Up, 1.5.1, 1517.000, v4
+bookn.me, Up, 1.4.1, 316.000, v4/ex
+bookwitty.social, Up, 1.4.4, 1408.000, v4/v6
+bookwor.ms, Up, 1.5.1, 496.000, v4
+borderline.mooo.info, Up, 1.5.1, 689.000, v4/v6
+boredom.land, Down, 000
+botdon.net, Up, 1.4.7, 296.000, v4
+botsin.space, Up, 1.5.1, 1194.000, v4
+boys.computer, Down, 404
+brrrt.eu, Up, 1.4.7, 1296.000, v4/ex
+burners.social, Up, 0.0.0, 904.000, v4/v6
+ca-os.com, Up, 0.0.0, 881.000, v4/v6
+cafe.des-blogueurs.org, Up, 1.5.1, 1533.000, v4
+caffeinatedfriends.club, Down, 404
+capitalism.party, Up, 1.5.1, 891.000, v4
+car-mastodon.link, Up, 0.0.0, 318.000, v4
+carma.red, Up, 1.5.1, 735.000, v4
+carnit.as, Up, 1.4.1, 1202.000, v4
+castodon.jp, Up, 0.0.0, 422.000, v4
+catdon.jp, Up, 1.4.6, 233.000, v4/v6
+catdon.life, Up, 1.3.3, 202.000, v4
+catholicism.rocks, Down, 404
+chabant.social, Up, 1.3.3, 1166.000, v4
+chaos.social, Up, 1.5.1, 2713.000, v4/v6
+charafre.noela.moe, Up, 1.3.3, 227.000, v4
+chat.fasil.cloud, Up, 0.0.0, 1372.000, v4
+chiawase.tokyo, Up, 1.3.2, 402.000, v4
+chibadon.jp, Up, 0.0.0, 372.000, v4
+chibi.kemo.no, Up, 1.5.1, 1242.000, v4/v6
+chitose.moe, Up, 1.6.0rc1, 438.000, v4/ex
+chitter.xyz, Up, 1.5.1, 1629.000, v4
+chiya.moe, Down, 404
+chizai.cafe, Up, 0.0.0, 223.000, v4
+chofudon.tokyo, Up, 1.3.2, 716.000, v4/ex
+chorus.space, Up, 1.3.3, 416.000, v4
+christodon.com, Up, 1.4.7, 210.000, v4
+cigarcabin.com, Up, 1.3.2, 1067.000, v4/ex
+cksv.jp, Up, 1.3.2, 284.000, v4
+cl
+clacks.link, Up, 1.5.1, 1187.000, v4
+claristdon.net, Up, 1.5.1, 213.000, v4
+clc.plus, Up, 0.0.0, 1107.000, v4/v6ubclubclub.club, Up, 0.0.0, 1687.000, v4
+cmpwn.com, Up, 1.5.1, 1386.000, v4
+cmu.party, Up, 0.0.0, 1810.000, v4/ex
+cn.tootist.net, Up, 0.0.0, 423.000, v4
+coales.co, Up, 1.6.0rc2, 2612.000, v4
+cocoronavi.net, Up, 1.6.0rc2, 285.000, v4
+comm.cx, Up, 1.6.0rc4-build.4058+g90712d4.with.comm_cx, 347.000, v4/v6
+compass-community.f5.si, Up, 1.3.3, 492.000, v4
+computerfairi.es, Up, 1.5.1, 759.000, v4
+cookdon.com, Up, 1.4.1, 270.000, v4
+corrigan.moe, Up, 1.6.0rc2, 1430.000, v4/v6
+cos.zone, Down, 000
+cosp.la, Up, 1.6.0rc2, 870.000, v4/ex
+creativity.cafe, Down, 500
+cryptid.club, Down, 000
+currydon.com, Up, 0.0.0, 255.000, v4
+cute.group, Down, 000
+cuttlefi.sh, Up, 1.3.3, 662.000, v4
+cybre.space, Up, 1.6.0rc2, 1176.000, v4/v6
+cyclodon.net, Up, 0.0.0, 283.000, v4
+d.mob-con.com, Down, 000
+dancingbanana.party, Up, 1.5.1, 1820.000, v4
+danshudon.jp, Up, 1.6.0rc2, 209.000, v4
+darkgeek.city, Up, 1.4.4, 1149.000, v4
+darkrose.threshold-zero.com, Up, 1.5.1, 1040.000, v4
+darksocial.party, Up, 1.5.1, 1110.000, v4
+dartsdon.jp, Down, 000
+deep-learning.site, Up, 1.5.1, 1260.000, v4
+delusion.ariela.jp, Up, 0.0.0, 200.000, v4
+demanderjustice.social, Up, 0.0.0, 3880.000, v4/ex
+dhtls.net, Up, 1.4.1, 259.000, v4
+diaspodon.fr, Up, 1.6.0rc2, 1552.000, v4
+disnidn.net, Down, 000
+djanzu.tokyo, Up, 1.6.0rc2, 432.000, v4
+dokushodon.life, Down, 000
+doll.social, Up, 1.4.6, 289.000, v4
+dolphin.town, Up, 0.0.0, 750.000, v4/ex
+domdom.tokyo, Up, 0.0.0, 265.000, v4
+don.akashi.cloud, Up, 1.5.1, 1037.000, v4
+don.asama.net, Down, 000
+don.chakuriki.net, Up, 0.0.0, 184.000, v4
+don.de-liker.com, Up, 1.6.0rc1, 270.000, v4/v6
+don.ekesete.net, Up, 1.5.1, 194.000, v4
+don.fgc.fun, Up, 1.3.2, 203.000, v4
+don.h3z.jp, Up, 1.5.1, 274.000, v4/v6
+don.komoro.net, Down, 000
+don.matchy.jp, Up, 1.6.0rc1, 659.000, v4
+don.mfz.jp, Up, 1.6.0rc2, 223.000, v4
+don.msng.info, Up, 0.0.0, 622.000, v4
+don.rabbit-house.me, Up, 1.3.3, 453.000, v4
+don.surumeapps.tk, Up, 1.5.1, 192.000, v4/v6
+don.tacostea.net, Up, 1.6.0rc4, 290.000, v4/v6
+don.techfeed.io, Up, 1.2.2, 356.000, v4
+don.wakamesoba98.net, Up, 1.5.1, 393.000, v4/v6
+don.yokohama, Up, 0.0.0, 294.000, v4
+doncers.com, Down, 000
+dondondon.ga, Down, 000
+donsuke.biz, Down, 000
+doshidon.com, Up, 1.3.3, 850.000, v4
+doug.computer, Down, 500
+dq10.online, Up, 1.3.2, 694.000, v4
+dramadon.net, Up, 1.4.1, 206.000, v4
+dreo.io, Up, 0.0.0, 1512.000, v4
+dtp-mstdn.jp, Up, 1.6.0rc4, 288.000, v4/v6
+dudesa.me, Down, 404
+dumbo.kr, Down, 000
+dumbo.nabago.net, Down, 000
+durel.org, Up, 1.5.0, 1668.000, v4
+east.mstdn.tokyo, Up, 1.6.0rc4, 305.000, v4
+eat-inago-inago.com, Down, 000
+ecodigital.social, Up, 1.5.1, 1372.000, v4/v6
+ecurie.social, Up, 1.5.0, 1550.000, v4
+edge.mstdn.jp, Up, 1.6.0rc4, 289.000, v4
+edgefire.sytes.net, Down, 502
+ediot.social, Up, 1.2.2, 836.000, v4/v6
+eesti.zone, Up, 1.3.3, 1557.000, v4
+eigadon.net, Up, 1.4.1, 202.000, v4
+eizodon.jp, Up, 1.5.1, 204.000, v4
+ekimemo.info, Up, 1.5.1, 178.000, v4
+ekuro.jp, Up, 1.2.2, 335.000, v4
+elekk.xyz, Up, 1.6.0rc1, 1380.000, v4
+elephant.bike, Up, 1.3.2, 947.000, v4
+elephant.bluecore.net, Up, 1.6.0rc1, 802.000, v4/v6
+eletusk.club, Up, 1.6.0rc2, 289.000, v4
+elict.net, Up, 1.3.3, 351.000, v4
+emacs.li, Up, 1.5.1, 1397.000, v4/v6
+emojidon.global, Up, 1.3.3, 446.000, v4
+engekidon.net, Down, 000
+engineered.space, Up, 1.3.3, 1397.000, v4
+ephemeral.glitch.social, Up, 1.6.0rc4, 844.000, v4/v6
+equestria.social, Up, 1.6.0rc4, 1630.000, v4/ex
+ery.kr, Up, 0.0.0, 401.000, v4
+etv.jikkyo.tv, Up, 1.4.1, 215.000, v4
+eu1.mastoburn.com, Down, 000
+eunivers.social, Up, 1.5.1, 1397.000, v4/ex
+everydon.com, Up, 0.0.0, 306.000, v4
+f-rabbit.com, Down, 000
+fanfare.horse, Up, 1.5.1, 716.000, v4
+faux.io, Up, 0.0.0, 885.000, v4/v6
+fern.surgeplay.com, Up, 1.5.1, 1155.000, v4/v6
+ffxiv-mastodon.com, Up, 1.5.0, 209.000, v4
+fgo.geekdon.jp, Down, 000
+fgochiho.vip, Up, 1.3.3, 308.000, v4
+fido.stephenbasile.com, Down, 502
+fierce-reef-65367.herokuapp.com, Up, 0.0.0, 1184.000, v4
+flower.afn.social, Up, 1.4.7, 259.000, v4
+fo0bar.org, Up, 1.5.1, 2588.000, v4/v6
+foodon.jp, Up, 1.3.2, 198.000, v4
+forexdon.org, Up, 1.3.2, 193.000, v4
+forum.manga.tokyo, Up, 1.5.1, 877.000, v4
+fr.osm.social, Up, 1.4.7, 2589.000, v4/v6
+framapiaf.org, Up, 1.4.4, 1422.000, v4/v6
+freehold.earth, Up, 0.0.0, 1004.000, v4/ex
+freeradical.zone, Up, 1.5.1, 758.000, v4/v6
+friends.nico, Up, 1.5.1, 194.000, v4
+friends.tennis, Up, 0.0.0, 840.000, v4
+friloux.me, Up, 1.5.0, 1498.000, v4
+from.komic.eu, Up, 1.6.0rc2, 1607.000, v4/v6
+frontend.social, Up, 1.3.2, 1116.000, v4
+frootmig.net, Up, 1.5.1, 1383.000, v4/v6
+ftb.moe, Down, 000
+fucktodon.tokyo, Down, 404
+fudanshi.org, Up, 1.6.0rc4, 965.000, v4/v6
+fullstackgeek.tech, Up, 0.0.0, 230.000, v4
+functional.cafe, Up, 1.5.1, 1282.000, v4
+funfunmstdn.tokyo, Up, 1.5.1, 606.000, v4/v6
+fur.cloud, Up, 1.4.0.6, 1254.000, v4
+furstdn.jp, Down, 000
+fx-don.net, Up, 1.5.1, 286.000, v4
+g0v.social, Up, 1.5.1, 496.000, v4
+gadget.inpocket.net, Up, 1.4.6, 230.000, v4
+gamba.osaka.jp, Up, 1.4.7, 292.000, v4
+gamecluster.net, Up, 1.4.1, 190.000, v4
+gamecreate.mstdn.cloud, Up, 1.3.2, 193.000, v4
+gamejam.site, Up, 1.4.1, 337.000, v4
+gamelinks007.net, Up, 1.4.1, 439.000, v4
+games-community.xyz, Up, 1.2.2, 263.000, v4
+gamesha.samurai-gamers.com, Down, 000
+gaven.social, Up, 1.4.0.6, 1435.000, v4/v6
+gbtdn.tokyo, Up, 1.4.7, 339.000, v4/v6
+gdrsocial.it, Up, 1.5.1, 2656.000, v4/v6
+geekvc.jp, Up, 1.3.2, 247.000, v4
+geekz4u.com, Down, 000
+gelt.cz, Up, 1.4.6, 1726.000, v4
+gender.town, Down, 502
+gensokyo.cloud, Up, 1.5.1, 191.000, v4/v6
+gensou.social, Up, 0.0.0, 330.000, v4
+gentleman-loser.com, Down, 502
+gifudon.jp, Down, 000
+gigamastodon.com, Up, 1.4.6, 272.000, v4
+gingadon.com, Up, 1.5.1, 344.000, v4
+gl.phil-ia.net, Up, 1.5.1, 262.000, v4
+glamdon.com, Up, 1.5.1, 1348.000, v4/v6
+glitch.social, Up, 1.6.0rc4, 863.000, v4/v6
+go-newbie.club, Up, 1.4.3, 309.000, v4
+golfdn.com, Down, 000
+gonext.gg, Up, 1.5.0, 1455.000, v4
+gonsphere.tk, Up, 1.4.1, 462.000, v4
+googoldon.net, Up, 1.3.3, 390.000, v4
+greylog.ru, Down, 000
+grimoire.kanzakiranko.jp, Down, 000
+guimik.fr, Up, 1.6.0rc4, 1767.000, v4
+gundam.masto.host, Up, 1.5.1, 2618.000, v4/v6
+gunmastodon.com, Up, 0.0.0, 201.000, v4
+gyudn.com, Down, 000
+gyudon.live, Up, 0.0.0, 320.000, v4
+hackers.town, Down, 502
+hakuhodon.com, Up, 0.0.0, 245.000, v4
+hamamyu.jp, Down, 000
+hamtter.net, Up, 1.6.0rc2, 277.000, v4/v6
+happy-social-life.fudanchii.net, Up, 1.4.7, 1444.000, v4
+haruhi-mstdn.club, Up, 1.5.1, 212.000, v4
+hatabowyou.club, Down, 000
+hckr.no, Up, 1.4.1, 1418.000, v4
+henrygarner.im, Down, 502
+hex.bz, Up, 1.5.1, 1166.000, v4/v6
+hfukuchi.masto.host, Up, 1.5.1, 1615.000, v4/v6
+hige.alterna-cloud.com, Up, 1.5.1, 265.000, v4
+himastdon.club, Up, 1.6.0rc2, 1205.000, v4/v6
+hitb-masto.herokuapp.com, Up, 0.0.0, 802.000, v4
+hobaugh.social, Up, 0.0.0, 1265.000, v4
+hodl.city, Up, 1.5.0, 729.000, v4
+hojiro.herokuapp.com, Up, 1.2.2, 883.000, v4
+hokutodon.co, Up, 1.3.2, 1145.000, v4
+home.aqraf.tokyo, Up, 1.5.1, 266.000, v4/v6
+homex.bounceme.net, Down, 000
+horiedon.com, Up, 1.4.7, 185.000, v4
+hostux.social, Up, 1.6.0rc4, 2874.000, v4/v6
+hsj.life, Up, 0.0.0, 221.000, v4
+hydroxyquinol.net, Up, 1.5.1, 231.000, v4
+i-kaohsiung.com, Down, 000
+i-n-t-e-r-n-e-t-2-0-0-0.net, Up, 1.3.3, 251.000, v4
+i.write.codethat.sucks, Up, 1.6.0rc2, 1156.000, v4/ex
+iamastodon.gifu.jp, Up, 1.4.3, 203.000, v4
+icosahedron.website, Up, 1.5.1, 1663.000, v4
+idbt.tv, Down, 000
+idoldon.com, Down, 404
+idolon.club, Up, 1.3.3, 233.000, v4
+idreamof.ryukyu, Down, 000
+ieji.de, Down, 404
+ifrit.gaia.ff14-mstdn.xyz, Up, 1.5.1, 464.000, v4
+igouv.fr, Up, 0.0.0, 1604.000, v4/v6
+ika.moe, Up, 1.4.1, 1659.000, v4/v6
+ika.queloud.net, Up, 1.5.1, 674.000, v4
+im-in.space, Up, 1.6.0rc1, 1495.000, v4/v6
+im.notreal.pw, Up, 1.4.7, 1386.000, v4
+imaginair.es, Up, 1.5.1, 2656.000, v4/v6
+imastodon.net, Up, 1.5.1, 900.000, v4
+inari.opencocon.org, Up, 1.5.1, 225.000, v4/v6
+infosec.exchange, Up, 1.6.0rc1, 1042.000, v4/v6
+insolente.im, Up, 1.5.1, 758.000, v4
+insoumis-es.net, Up, 0.0.0, 1445.000, v4
+insoumis.social, Up, 1.5.1, 1942.000, v4
+interfesse.net, Up, 1.5.1, 1111.000, v4/v6
+introvert.party, Up, 0.0.0, 1500.000, v4
+iomstdn.tokyo, Up, 1.4.1, 242.000, v4
+ipv6.social.konosuke.jp, Up, 1.6.0rc4, 258.000, v6
+is.a.qute.dog, Up, 1.5.0 +11 (b5ee593), 864.000, v4/v6
+ishikaridon.jp, Down, 000
+ivrianochi.com, Up, 1.3.2, 1130.000, v4
+iwatedon.net, Up, 1.5.1, 333.000, v4/v6
+janogdon.net, Up, 1.5.1, 210.000, v4/v6
+japaon.cf, Up, 1.4.7, 1293.000, v4
+jeunesse.media, Up, 0.0.0, 1184.000, v4/v6
+jianghupl.com, Down, 404
+jitakudon.com, Up, 1.6.0rc2, 303.000, v4
+john-mastodon.scalingo.io, Up, 1.3.2, 1685.000, v4
+jojomonvr.com, Up, 1.3.3, 214.000, v4
+jp-mstdn.com, Up, 1.5.0, 299.000, v4
+jpnews.site, Up, 1.3.2, 373.000, v4
+jstd.me, Up, 1.2.2, 894.000, v4/v6
+julika.jp, Up, 1.3.3, 239.000, v4
+k0ta.net, Down, 000
+kabudon.jp, Up, 1.4.7, 239.000, v4
+kabutodon.com, Up, 1.5.1, 229.000, v4
+kaisendon.asmodeus.red, Up, 1.6.0rc2, 368.000, v4
+kaisendon.masto.host, Up, 1.5.1, 1319.000, v4/v6
+kakudon.com, Up, 1.4.1, 608.000, v4
+kancolle-yokosuka.xyz, Up, 1.3.2, 566.000, v4
+kashiwadon.net, Up, 1.4.0.5, 496.000, v4
+keiba.social, Up, 1.4.7, 273.000, v4
+keibadon.com, Down, 000
+kemono-friends.masto.host, Up, 1.5.1, 1348.000, v4/v6
+kemonodon.club, Up, 1.4.7, 224.000, v4
+kero.ccsakura.jp, Up, 1.4.3, 1536.000, v4
+kerokero.rororo.xyz, Up, 1.5.1, 414.000, v4/v6
+killmi.st, Up, 1.5.1, 701.000, v4/v6
+kingdown.social, Down, 500
+kinky.business, Up, 1.4.6, 879.000, v4/v6
+kinugasa.me, Up, 0.0.0, 268.000, v4
+kirakiratter.com, Up, 1.5.1, 886.000, v4/v6
+kirapower.ichigo-hoshimiya.com, Up, 1.5.1, 656.000, v4/v6
+kirby-fans.com, Up, 1.4.1, 317.000, v4
+kitadon.com, Up, 0.0.0, 257.000, v4
+kitty.town, Up, 1.5.1, 1132.000, v4/v6
+kmmtn.com, Up, 1.4.1, 158.000, v4
+kokedon.xyz, Down, 000
+komula.space, Down, 000
+konkat.jp, Up, 0.0.0, 254.000, v4
+koreus.social, Up, 1.4.0.6, 1595.000, v4/v6
+koshiendon.com, Down, 000
+kosmos.social, Up, 1.5.0rc3, 1191.000, v4/v6
+koyuston.tk, Down, 000
+kpodon.jp, Up, 0.0.0, 200.000, v4
+kpopjp.net, Down, 000
+krsymstdn.jp, Up, 0.0.0, 208.000, v4
+kurage.cc, Up, 1.6.0rc2, 204.000, v4
+kurakake.net, Up, 1.5.1, 1200.000, v4
+kurosawa-ruby.xyz, Up, 1.3.3, 185.000, v4
+kyoto-citygrid.org, Up, 1.6.0rc1, 264.000, v4/v6
+kyureki.jp, Up, 1.4.1, 240.000, v4
+labotadon.net, Up, 1.5.0rc1, 963.000, v4
+latedon.sui-hei.net, Down, 502
+lavraievie.social, Up, 1.3.2, 1436.000, v4/ex
+leaf.style, Up, 1.5.1, 424.000, v4
+learn-english.site, Up, 1.5.1, 1222.000, v4
+lemontree.ml, Down, 000
+lethar.gy, Down, 502
+lfsr.net, Up, 1.4.1, 336.000, v4/v6
+lgbt.io, Up, 1.4.7, 770.000, v4/v6
+lgbtjcat.com, Down, 400
+lilydon.com, Up, 1.3.3, 307.000, v4
+linuxrocks.online, Up, 1.6.0rc2, 1300.000, v4
+livers.jp, Up, 1.5.1, 1229.000, v4/v6
+lomo.mstdn.tokyo, Up, 1.4.4, 794.000, v4
+lou.lt, Up, 1.5.1, 1406.000, v4
+loutre.info, Up, 1.6.0rc1, 1391.000, v4
+lovelive-anime.tk, Up, 1.5.1, 175.000, v4/v6
+ltu.social, Down, 404
+m-uru.website, Up, 1.3.1, 1127.000, v4
+m.4ac.me, Down, 502
+m.g3l.org, Up, 1.5.1, 1642.000, v4/v6
+m.gandi.social, Up, 0.0.0, 1538.000, v4/v6
+m.geraffel.net, Up, 1.4.6, 1470.000, v4/ex
+m.loovto.net, Up, 1.5.1, 1589.000, v4/v6
+m.massy.city, Up, 1.4.7, 1558.000, v4/v6
+m.moriya.faith, Up, 1.5.1, 301.000, v4/ex
+m.okadajp.org, Up, 1.5.1, 318.000, v4
+m.pira.jp, Up, 1.5.1, 1343.000, v4
+m.plop.cc, Down, 502
+m.pref.yokohama, Down, 000
+m.r4o.jp, Down, 000
+m.rweekly.org, Up, 1.3.2, 994.000, v4/v6
+m.sighash.info, Up, 1.3.2, 863.000, v4
+m.sixfoisneuf.fr, Down, 404
+m.sl-network.fr, Up, 1.5.0, 1890.000, v4/v6
+m.socialjustice.engineering, Up, 1.4.6, 1046.000, v4
+m.u7fa9.org, Up, 1.3.2, 620.000, v4
+m.uncate.org, Up, 1.5.1, 390.000, v4
+m.upsilo.net, Up, 1.4.3, 446.000, v4/v6
+m.v.nu, Up, 0.0.0, 346.000, v4/v6
+m4570.xyz, Up, 1.5.1, 1664.000, v4/v6
+m6n.jp, Up, 1.4.7, 218.000, v4
+m6n.kigurumi.fun, Up, 1.5.0, 529.000, v4
+m6n.onsen.tech, Up, 1.4.7, 241.000, v4
+madomadon.net, Up, 1.4.1, 1193.000, v4
+magi.systems, Down, 000
+malfunctioning.technology, Up, 1.5.0rc1, 780.000, v4
+maltdn.com, Up, 0.0.0, 209.000, v4
+maly.io, Up, 1.5.1, 1268.000, v4
+mammout.bzh, Up, 1.4.6, 2655.000, v4/v6
+mammouth.cafe, Up, 1.5.1, 1601.000, v4/ex
+mammouth.inframed.net, Up, 1.5.1, 1406.000, v4
+mammut.red, Down, 000
+mammut.space, Up, 1.5.1, 1708.000, v4/v6
+mammut.zasha.style, Up, 1.4.7, 303.000, v4/v6
+mamoot.party, Down, 000
+mamot.fr, Up, 1.4.3, 1191.000, v4/v6
+mamout.xyz, Up, 1.5.1, 1389.000, v4/v6
+mangadon.net, Up, 1.4.1, 197.000, v4
+manhole.club, Up, 1.5.1, 254.000, v4
+manowar.social, Up, 1.5.1, 1523.000, v4
+manx.social, Up, 1.6.0rc4, 1790.000, v4/ex
+mapicardie.fr, Down, 000
+marxism.party, Down, 000
+mas.home.monsiteinternet.org, Up, 1.5.1, 1450.000, v4
+masatodon.click, Up, 1.4.6, 180.000, v4
+masatodon.com, Up, 1.3.3, 211.000, v4
+masatodon.jp, Up, 1.5.1, 268.000, v4
+mast.catsbay.org, Down, 000
+mast.eu.org, Up, 1.4.7, 1721.000, v4
+mast.kaikretschmann.de, Up, 1.4.7, 1654.000, v4/v6
+mast.moe, Up, 1.5.1, 522.000, v4/v6
+mast.tokyo, Up, 0.0.0, 853.000, v4
+mast0d0n.fr, Down, 000
+mastadon.tescher.me, Up, 0.0.0, 1465.000, v4/v6
+mastd.me, Up, 1.3.3, 332.000, v4/ex
+mastd.racing, Up, 1.6.0rc2, 1790.000, v4
+mastdn.com, Down, 000
+mastdn.jp, Down, 000
+mastdn.lovesaemi.daemon.asia, Up, 1.5.0, 230.000, v4
+mastdn.me, Down, 000
+mastdon.amazedkoumei.com, Up, 1.5.1, 239.000, v4
+mastdon.jp, Down, 503
+mastedm.club, Up, 1.5.0, 202.000, v4
+masto.dog, Up, 1.4.0.6, 950.000, v4
+masto.fdlibre.eu, Up, 1.5.1, 1603.000, v4
+masto.fslhome.org, Up, 1.4.3, 1377.000, v4/v6
+masto.io, Up, 1.5.1, 1150.000, v4/v6
+masto.ninja, Up, 1.5.1, 1667.000, v4/v6
+masto.pt, Up, 1.5.1, 1258.000, v4/v6
+masto.quad.moe, Up, 1.4.3, 1382.000, v4/ex
+masto.raildecake.fr, Up, 1.5.0, 1208.000, v4/v6
+masto.se, Down, 404
+masto.svnet.fr, Up, 1.5.0, 1589.000, v4/v6
+masto.themimitoof.fr, Up, 1.5.0rc3, 1587.000, v4/v6
+mastocial.stream, Down, 000
+mastod.life, Down, 000
+mastodol.jp, Up, 1.4.4, 173.000, v4
+mastodoll.net, Up, 1.5.1, 223.000, v4
+mastodon-lyontech.fr, Up, 0.0.0, 1414.000, v4/ex
+mastodon-nagano.info, Down, 000
+mastodon-omoshiro.com, Up, 1.3.3, 239.000, v4
+mastodon-robamimi.club, Down, 502
+mastodon-srv.gq, Up, 1.5.0, 399.000, v4/v6
+mastodon-startup.org, Up, 1.4.7, 240.000, v4
+mastodon.103.ms, Up, 1.5.1, 314.000, v4
+mastodon.2502.net, Up, 1.5.1, 230.000, v4/v6
+mastodon.29lab.jp, Up, 1.4.7, 190.000, v4
+mastodon.3bk.jp, Up, 1.2.2, 284.000, v4
+mastodon.850mb.net, Up, 1.3.2, 220.000, v4/v6
+mastodon.9net.org, Up, 1.4.3, 1027.000, v4/v6
+mastodon.acc.sunet.se, Up, 1.5.1, 1508.000, v4/ex
+mastodon.acc.umu.se, Up, 1.5.1, 1748.000, v4/ex
+mastodon.aigamo-web.net, Up, 0.0.0, 458.000, v4
+mastodon.ajy.co, Down, 000
+mastodon.al, Down, 000
+mastodon.alexrio.fr, Up, 0.0.0, 5357.000, v4
+mastodon.applest.net, Up, 0.0.0, 465.000, v4
+mastodon.aquarla.net, Up, 1.5.1, 225.000, v4/v6
+mastodon.ar.al, Up, 1.5.1, 4751.000, v4
+mastodon.art, Up, 1.5.1, 1515.000, v4/v6
+mastodon.at, Up, 1.5.1, 1241.000, v4
+mastodon.aventer.biz, Up, 1.5.1, 1784.000, v4
+mastodon.bearmulk.us, Up, 0.0.0, 1092.000, v4
+mastodon.beerfactory.org, Up, 1.5.0, 1687.000, v4
+mastodon.benoit-alessandroni.fr, Down, 000
+mastodon.bitbank.cc, Up, 0.0.0, 203.000, v4
+mastodon.blue, Up, 1.5.1, 1325.000, v4/v6
+mastodon.brussels, Down, 404
+mastodon.bunkerchan.xyz, Down, 500
+mastodon.burnworks.com, Up, 1.5.1, 378.000, v4/v6
+mastodon.business, Down, 521
+mastodon.casoetto.net, Down, 000
+mastodon.cc, Up, 1.6.0rc2, 807.000, v4/ex
+mastodon.cemea.org, Up, 1.3.3, 1444.000, v4
+mastodon.center, Down, 000
+mastodon.centiworks.com, Up, 1.5.1, 922.000, v4
+mastodon.cgx.me, Up, 1.5.1, 1930.000, v4/v6
+mastodon.chaosfield.at, Up, 1.5.1, 1869.000, v4
+mastodon.chocolicornes.org, Down, 000
+mastodon.chotto.moe, Up, 1.6.0rc4, 344.000, v4/v6
+mastodon.civleaguejp.net, Up, 1.3.3, 215.000, v4
+mastodon.cl, Up, 1.4.0.6, 1214.000, v4
+mastodon.cloud, Up, 1.5.1, 1238.000, v4/v6
+mastodon.cloud-ace.jp, Up, 0.0.0, 265.000, v4
+mastodon.club, Up, 1.4.1, 1074.000, v4
+mastodon.co.nz, Up, 0.0.0, 609.000, v4/ex
+mastodon.co.za, Up, 1.3.2, 1299.000, v4
+mastodon.codingfield.com, Up, 1.5.1, 1493.000, v4/ex
+mastodon.coffee, Down, 000
+mastodon.com.tw, Down, 000
+mastodon.cool, Up, 1.3.3, 1478.000, v4
+mastodon.cosmicanimal.jp, Up, 1.4.3, 303.000, v4
+mastodon.crazynewworld.net, Up, 1.6.0rc2, 323.000, v4
+mastodon.crazypanda.fr, Up, 1.5.0, 1454.000, v4
+mastodon.crossfamilyweb.com, Up, 1.5.1, 1434.000, v4
+mastodon.crypt.lol, Up, 0.0.0, 3075.000, v4
+mastodon.cusae.com, Up, 1.4.3, 2689.000, v4/v6
+mastodon.cyber-tribal.com, Down, 503
+mastodon.decharriere.fr, Down, 000
+mastodon.dereferenced.org, Up, 1.4.4, 1386.000, v4
+mastodon.desync.net, Down, 502
+mastodon.diglateam3.com, Up, 1.5.1, 139.000, v4
+mastodon.direct, Down, 000
+mastodon.dissem.ch, Up, 1.6.0rc2, 1650.000, v4/v6
+mastodon.div88.org, Down, 000
+mastodon.dotopia.dk, Down, 500
+mastodon.dqfan.club, Up, 0.0.0, 267.000, v4
+mastodon.dremtech.fr, Up, 0.0.0, 1357.000, v4/v6
+mastodon.e217.net, Up, 1.5.1, 269.000, v4/v6
+mastodon.eastback.co.jp, Up, 1.4.6, 564.000, v4
+mastodon.eifelcoworking.space, Down, 000
+mastodon.elao.com, Up, 1.4.7, 1384.000, v4
+mastodon.eliotberriot.com, Up, 1.5.1, 1629.000, v4
+mastodon.engineering, Up, 1.4.6, 862.000, v4
+mastodon.etalab.gouv.fr, Up, 1.5.1, 1481.000, v4
+mastodon.euskirchen.digital, Down, 000
+mastodon.evolix.org, Up, 1.5.1, 1165.000, v4
+mastodon.expert, Up, 1.3.2, 1663.000, v4/v6
+mastodon.fishing, Up, 1.4.1, 252.000, v4
+mastodon.friendlydads.net, Up, 1.4.0.6, 1266.000, v4
+mastodon.frontierfoundry.co, Down, 503
+mastodon.ftfl.ca, Up, 1.6.0rc2, 1582.000, v4
+mastodon.fu-jp.net, Up, 1.3.2, 194.000, v4
+mastodon.fun, Up, 1.4.6, 1951.000, v4/ex
+mastodon.fyi, Up, 1.4.7, 868.000, v4/v6
+mastodon.gargantia.fr, Up, 1.5.1, 1498.000, v4
+mastodon.gbnet.net, Up, 1.3.2, 1653.000, v4
+mastodon.gg, Down, 000
+mastodon.gifclip.info, Up, 1.3.3, 621.000, v4
+mastodon.gnieh.org, Down, 404
+mastodon.gougere.fr, Up, 1.5.1, 1550.000, v4
+mastodon.groningendigitalcity.com, Up, 0.0.0, 1684.000, v4/v6
+mastodon.gza.jp, Up, 1.5.1, 264.000, v4
+mastodon.hackerlab.fr, Up, 1.5.1, 1817.000, v4/ex
+mastodon.hakoai.com, Up, 1.4.7, 2564.000, v4/v6
+mastodon.hartley.cc, Down, 000
+mastodon.hasameli.com, Up, 1.3.2, 761.000, v4
+mastodon.havas.jp, Up, 0.0.0, 223.000, v4
+mastodon.hekki.info, Up, 1.3.3, 258.000, v4
+mastodon.herebedragons.io, Down, 000
+mastodon.hexaly.se, Down, 404
+mastodon.hk, Up, 0.0.0, 493.000, v4/v6
+mastodon.home.js4.in, Up, 1.6.0rc4, 1709.000, v6
+mastodon.homeip.net, Up, 1.5.0, 973.000, v4/v6
+mastodon.horde.net.br, Up, 1.5.1, 951.000, v4
+mastodon.host, Up, 1.6.0rc2, 1774.000, v4/v6
+mastodon.hugopoi.net, Up, 1.5.1, 1364.000, v4
+mastodon.huma-num.fr, Up, 1.5.1, 1594.000, v4
+mastodon.in.ua, Down, 000
+mastodon.indie.host, Up, 1.4.7, 1383.000, v4
+mastodon.infra.de, Up, 1.6.0rc4, 1758.000, v4
+mastodon.ingress-enl.jp, Up, 1.4.1, 264.000, v4
+mastodon.internot.no, Up, 1.5.1, 1736.000, v4
+mastodon.iot.tokyo, Up, 1.3.3, 362.000, v4
+mastodon.izzz.fr, Up, 1.5.1, 1673.000, v4
+mastodon.jamesmwright.com, Up, 1.5.1, 1233.000, v4
+mastodon.jonleibowitz.com, Down, 500
+mastodon.jpages.eu, Up, 1.3.3, 1765.000, v4
+mastodon.jtwp470.net, Up, 1.4.7, 320.000, v4/v6
+mastodon.juggler.jp, Up, 1.5.1, 238.000, v4
+mastodon.ka0.co, Up, 0.0.0, 452.000, v4
+mastodon.kakunpc.com, Down, 000
+mastodon.kawaiyume.net, Up, 1.3.3, 1425.000, v4
+mastodon.kebree.fr, Up, 1.4.1, 2644.000, v4
+mastodon.kitamurakz.com, Up, 1.5.0, 249.000, v4
+mastodon.koteitan.com, Down, 000
+mastodon.kujiu.org, Up, 1.5.1, 2605.000, v4/v6
+mastodon.lachman.tk, Down, 000
+mastodon.land, Up, 1.4.1, 1606.000, v4/v6
+mastodon.latransition.org, Up, 1.5.1, 1327.000, v4/v6
+mastodon.lavergne.online, Up, 1.5.0, 2630.000, v4
+mastodon.le-palantir.com, Up, 1.4.7, 1559.000, v4
+mastodon.lemarchand.io, Up, 1.4.1, 1600.000, v4/v6
+mastodon.lertsenem.com, Up, 1.5.0, 1756.000, v4
+mastodon.libre-entreprise.com, Up, 0.0.0, 2602.000, v4
+mastodon.lignux.com, Up, 1.3.3, 1271.000, v4
+mastodon.limilo.com, Up, 0.0.0, 1070.000, v4/v6
+mastodon.link, Up, 0.0.0, 1561.000, v4
+mastodon.linuxquimper.org, Up, 1.5.1, 1650.000, v4
+mastodon.loomcom.com, Down, 000
+mastodon.lu, Up, 0.0.0, 1687.000, v4
+mastodon.m0t0k1ch1.com, Up, 1.3.3, 311.000, v4/v6
+mastodon.machique.st, Up, 0.0.0, 565.000, v4/ex
+mastodon.macondo.info, Down, 000
+mastodon.macsnet.cz, Up, 1.5.1, 2723.000, v4/v6
+mastodon.maromaro.co.jp, Up, 1.3.2, 540.000, v4/v6
+mastodon.matcha-soft.com, Up, 1.6.0rc4, 556.000, v4/v6
+mastodon.matrix.org, Up, 1.3.2, 1665.000, v4/v6
+mastodon.me.uk, Up, 0.0.0, 1618.000, v4/v6
+mastodon.medieval.jp, Up, 1.4.7, 252.000, v4
+mastodon.megkuma.com, Up, 1.3.2, 197.000, v4
+mastodon.mezashi.info, Down, 000
+mastodon.mfjt.jp, Down, 000
+mastodon.migennes.net, Up, 1.5.1, 1913.000, v4
+mastodon.minicube.net, Up, 0.0.0, 293.000, v4
+mastodon.mit.edu, Up, 1.5.1, 1033.000, v4
+mastodon.mita.me, Up, 1.3.2, 1509.000, v4
+mastodon.mnetwork.co.kr, Up, 1.5.1, 618.000, v4
+mastodon.moritrunk.com, Down, 526
+mastodon.moshsh-mate.com, Up, 1.4.0.3, 699.000, v4
+mastodon.mosin.jp, Up, 0.0.0, 368.000, v4
+mastodon.motcha.tech, Up, 1.5.0, 291.000, v4/v6
+mastodon.mpy.ovh, Up, 1.4.1, 1664.000, v4/v6
+mastodon.mrtino.eu, Up, 1.5.1, 1400.000, v4/v6
+mastodon.muage.org, Up, 1.5.1, 2581.000, v4/v6
+mastodon.my, Down, 502
+mastodon.nara.jp, Up, 1.5.1, 298.000, v4
+mastodon.neilcastelino.com, Up, 1.3.3, 1491.000, v4
+mastodon.nestegg.net, Up, 1.5.1, 1227.000, v4
+mastodon.network, Down, 000
+mastodon.niu.ne.jp, Up, 1.4.7, 329.000, v4/v6
+mastodon.nl, Up, 1.5.1, 1338.000, v4
+mastodon.noraworld.jp, Up, 1.6.0rc1, 142.000, v4
+mastodon.not-enough.space, Up, 1.4.6, 1556.000, v4/ex
+mastodon.notwebsite.com, Up, 0.0.0, 948.000, v4
+mastodon.nu, Down, 000
+mastodon.nzoss.nz, Up, 1.3.2, 2892.000, v4
+mastodon.oeru.org, Up, 1.4.7, 764.000, v4
+mastodon.oita.jp, Up, 1.3.3, 238.000, v4
+mastodon.on-o.com, Up, 1.5.1, 240.000, v4
+mastodon.opportunis.me, Up, 1.6.0rc4, 3888.000, v4/ex
+mastodon.org.uk, Up, 1.5.1, 1657.000, v4/v6
+mastodon.osaka, Up, 1.5.1, 226.000, v4
+mastodon.oss.nagoya, Down, 000
+mastodon.osyakasyama.me, Up, 1.5.1, 445.000, v4
+mastodon.p2pquake.net, Down, 000
+mastodon.paas.jp, Down, 000
+mastodon.papey.fr, Up, 1.5.1, 1456.000, v4
+mastodon.partecipa.digital, Up, 1.4.7, 1710.000, v4
+mastodon.partipirate.org, Up, 1.4.3, 1501.000, v4
+mastodon.patallan.com.au, Up, 0.0.0, 1106.000, v4
+mastodon.pe, Up, 0.0.0, 1079.000, v4/v6
+mastodon.peshane.net, Up, 1.5.1, 1628.000, v4/v6
+mastodon.pirateparty.be, Up, 1.5.1, 1706.000, v4
+mastodon.pl, Down, 404
+mastodon.plein.org, Up, 1.4.7, 1026.000, v4/ex
+mastodon.pocka.info, Up, 0.0.0, 188.000, v4
+mastodon.poker, Up, 1.3.3, 371.000, v4
+mastodon.potager.org, Up, 1.5.1, 1715.000, v4
+mastodon.potproject.net, Up, 1.5.1, 633.000, v4
+mastodon.pro, Down, 000
+mastodon.punkti.co, Up, 1.4.4, 1292.000, v4
+mastodon.qowala.org, Up, 1.5.1, 1668.000, v4
+mastodon.rainbownerds.de, Up, 1.4.3, 2693.000, v4/v6
+mastodon.randulo.com, Up, 1.5.1, 1211.000, v4/v6
+mastodon.redbrick.dcu.ie, Up, 1.5.0, 4681.000, v4
+mastodon.robotstart.info, Up, 1.4.1, 215.000, v4
+mastodon.rock-hosting.net, Down, 502
+mastodon.rocks, Up, 1.6.0rc1, 1298.000, v4/v6
+mastodon.roflcopter.fr, Up, 1.5.1, 1808.000, v4
+mastodon.rw, Up, 0.0.0, 854.000, v4
+mastodon.sail42.fr, Up, 1.4.0.3, 1399.000, v4
+mastodon.sandwich.net, Up, 1.5.0, 1416.000, v4/v6
+mastodon.sarkastic.org, Up, 1.4.1, 1387.000, v4
+mastodon.saucissefrites.com, Up, 1.4.0.6, 1547.000, v4
+mastodon.savikin.me, Up, 1.3.3, 1330.000, v4
+mastodon.scoffoni.net, Up, 0.0.0, 1869.000, v4
+mastodon.scot, Up, 1.4.0.4, 1640.000, v4
+mastodon.scuttle.org, Up, 1.4.1, 1407.000, v4/ex
+mastodon.sdf.org, Up, 1.5.1, 750.000, v4
+mastodon.sean666888.tk, Up, 1.6.0rc1, 1045.000, v4/v6
+mastodon.seijin.jp, Down, 000
+mastodon.seti.bzh, Up, 0.0.0, 2631.000, v4/v6
+mastodon.shuuten.org, Up, 0.0.0, 396.000, v4/v6
+mastodon.sngsk.info, Up, 1.6.0rc4, 653.000, v4
+mastodon.snowandtweet.jp, Up, 1.5.0, 316.000, v4
+mastodon.social, Up, 1.6.0rc2, 1342.000, v4
+mastodon.sportsfans.social, Down, 000
+mastodon.srvmaison.fr.nf, Up, 1.5.0, 1791.000, v4
+mastodon.starrevolution.org, Up, 1.5.0, 980.000, v4/ex
+mastodon.stephenson.cc, Up, 1.4.7, 797.000, v4
+mastodon.storel.li, Down, 502
+mastodon.survival-machines.fr, Up, 1.6.0rc1, 1950.000, v4/v6
+mastodon.swordlogic.com, Up, 1.4.7, 828.000, v4/v6
+mastodon.sxpert.org, Up, 1.5.1, 1619.000, v4/v6
+mastodon.sylphid.jp, Up, 1.4.6, 221.000, v4
+mastodon.sylvaniansagamies.tokyo, Down, 502
+mastodon.sysreturn.net, Down, 000
+mastodon.teamblackberry.jp, Up, 1.3.2, 295.000, v4
+mastodon.technology, Up, 1.5.0, 975.000, v4/v6
+mastodon.technosorcery.net, Up, 1.5.1, 900.000, v4
+mastodon.tedomum.net, Up, 1.5.0, 2611.000, v4/v6
+mastodon.tetaneutral.net, Up, 1.5.1, 1614.000, v4/v6
+mastodon.tetrisfreak.org, Up, 1.2.2, 339.000, v4
+mastodon.thegraveyard.org, Up, 1.4.6, 1410.000, v4/v6
+mastodon.to, Up, 1.5.1, 772.000, v4/v6
+mastodon.tokyo, Down, 000
+mastodon.top, Up, 1.5.1, 1312.000, v4/v6
+mastodon.toycode.com, Up, 1.5.1, 203.000, v4
+mastodon.training, Up, 0.0.0, 846.000, v4
+mastodon.transneptune.net, Up, 1.6.0rc1, 3433.000, v4
+mastodon.tricast.org, Up, 1.3.2, 285.000, v4
+mastodon.triofan.com, Up, 0.0.0, 806.000, v4/v6
+mastodon.ts-novels.jp, Down, 000
+mastodon.u4u.org, Up, 1.6.0rc4, 1735.000, v4
+mastodon.un-zero-un.net, Up, 0.0.0, 1690.000, v4/ex
+mastodon.undernet.uy, Up, 1.4.4, 2605.000, v4
+mastodon.unfollow.today, Up, 1.5.1, 1807.000, v4
+mastodon.uy, Up, 1.5.1, 1729.000, v4
+mastodon.vegas, Down, 000
+mastodon.vlntn.pw, Down, 503
+mastodon.w41.org, Down, 000
+mastodon.wakayama.jp, Up, 1.4.7, 193.000, v4
+mastodon.weaponvsac.space, Up, 1.5.1, 1262.000, v4/v6
+mastodon.wiuse.work, Up, 1.3.3, 741.000, v4
+mastodon.wolfe.cloud, Down, 000
+mastodon.work, Down, 000
+mastodon.xsteadfastx.org, Down, 502
+mastodon.xyz, Up, 1.5.1, 1703.000, v4/v6
+mastodon.yamaoka-takeshi.xyz, Down, 000
+mastodon.ynu.zone, Down, 000
+mastodon.yokohama, Up, 1.5.0, 267.000, v4/v6
+mastodon.yoyo.org, Up, 0.0.0, 1869.000, v4
+mastodon.yumulab.org, Up, 0.0.0, 219.000, v4
+mastodon.yuritopia.net, Up, 1.4.7, 784.000, v4
+mastodon.zaclys.com, Up, 1.5.0, 1675.000, v4
+mastodon.zeguigui.com, Up, 0.0.0, 2561.000, v4/v6
+mastodon.zenfolie.org, Up, 1.5.1, 1479.000, v4/ex
+mastodon.zenger.nl, Down, 000
+mastodon.zombocloud.com, Up, 1.5.1, 808.000, v4/v6
+mastodon.zunda.ninja, Up, 1.6.0rc4 at b90205bc, 884.000, v4
+mastodon.zzpro.net, Up, 1.3.3, 362.000, v4/v6
+mastodonar.club, Down, 404
+mastodonargentina.club, Up, 1.3.3, 1280.000, v4/v6
+mastodonaustralia.com.au, Up, 1.2.2, 1239.000, v4/v6
+mastodonchile.club, Up, 1.5.1, 945.000, v4
+mastodonfrance.com, Down, 500
+mastodonian.city, Up, 1.6.0rc4, 1723.000, v4
+mastodons.jp, Up, 1.2.2, 445.000, v4
+mastodonsocial.ru, Down, 000
+mastodont.cat, Up, 1.5.1, 1780.000, v4/ex
+mastodont.social, Down, 000
+mastodonte.me, Up, 1.4.3, 889.000, v4/v6
+mastodonti.co, Up, 1.5.1, 1431.000, v4/v6
+mastodoom.social, Up, 0.0.0, 391.000, v4
+mastodos.com, Up, 1.5.1, 365.000, v4
+mastonon.net, Down, 000
+mastoton.fi, Up, 1.5.0, 1625.000, v4/ex
+mastube.jp, Down, 000
+masutabedon.com, Down, 000
+matchdon.com, Up, 1.5.1, 245.000, v4
+mathstodon.xyz, Up, 1.5.1, 1119.000, v4
+mathtod.online, Up, 1.4.3, 344.000, v4/ex
+mathtodon.com, Up, 1.3.3, 267.000, v4
+matitodon.com, Up, 1.5.1, 1240.000, v4/v6
+mayodon.club, Up, 1.6.0rc1-e0c5230, 269.000, v4/v6
+mazu.social, Down, 000
+mbstdn.tokyo, Down, 000
+mcb.today, Down, 404
+mcdev.tech, Down, 000
+md.ggtea.org, Up, 1.6.0rc4 90712d4293, 251.000, v4/v6
+md.jigensha.info, Up, 0.0.0, 845.000, v4
+md.paoon.social, Up, 1.5.1, 259.000, v4/v6
+md.yutasan.co, Up, 1.5.0, 261.000, v4
+md.yuzulia.com, Down, 400
+mdn.crows.tokyo, Up, 1.4.7, 455.000, v4/ex
+mdn.hinaloe.net, Up, 1.4.1, 210.000, v4/v6
+mdx.ggtea.org, Up, 1.6.0rc4 90712d4293, 230.000, v4/v6
+mediadon.jp, Up, 1.3.3, 237.000, v4
+mediartodon.net, Up, 1.3.2, 694.000, v4
+medicaldon.jp, Down, 000
+meemu.org, Down, 500
+mel.social, Up, 1.4.0.6, 645.000, v4
+mellified.men, Up, 1.5.1, 969.000, v4
+mementomori.space, Down, 404
+mental.social, Up, 1.5.0, 329.000, v4
+meow.social, Up, 1.5.1, 1746.000, v4
+merkel.social, Up, 1.5.0, 1209.000, v4/v6
+metal.odon.space, Up, 1.5.1, 1629.000, v4/v6
+mevo.xyz, Up, 1.6.0rc4, 488.000, v4/v6
+mi.pede.rs, Up, 1.5.1, 1205.000, v4
+mi5.jp, Up, 1.2.2, 227.000, v4
+miaou.drycat.fr, Up, 1.5.1, 2637.000, v4/v6
+miestodon.com, Up, 1.4.7, 740.000, v4
+mikado-city.jp, Up, 0.0.0, 254.000, v4
+mikumikudance.cloud, Up, 1.6.0rc4, 227.000, v4
+mimumedon.com, Up, 1.4.6, 227.000, v4
+mindful.masto.host, Down, 000
+minidon.bacardi55.org, Up, 1.5.1, 1584.000, v4/v6
+minimes.hacklab.science, Up, 1.4.1, 1243.000, v4
+misanthropy.wang, Up, 0.0.0, 1780.000, v4/ex
+mist.so, Up, 1.3.3, 397.000, v4/v6
+mistermi.me, Down, 503
+misty-island.info, Down, 000
+mn.kitetu.com, Up, 1.5.0, 291.000, v4
+moar.wine, Down, 000
+mobie.live, Up, 0.0.0, 754.000, v4
+moe.cat, Up, 1.6.0rc1, 368.000, v4/ex
+moe.neon.moe, Up, 1.5.0, 1390.000, v4/v6
+moeism.me, Up, 1.3.3, 356.000, v4
+mofu.kemo.no, Up, 1.5.1, 1155.000, v4/v6
+momoclo.social, Down, 000
+monstodon.info, Up, 1.3.3, 296.000, v4
+mopped.space, Down, 404
+moseisley.club, Up, 1.5.1, 1363.000, v4/v6
+mostodon.info, Up, 1.5.1, 271.000, v4
+mr.am, Up, 1.4.0.4, 304.000, v4/ex
+mrt.al, Up, 1.5.1, 1162.000, v4
+msdnaart.net, Up, 1.5.1, 306.000, v4
+msgdn.xyz, Up, 0.0.0, 488.000, v4
+mst.dolpen.net, Up, 0.0.0, 1502.000, v4
+mst.ongstar.jp, Up, 1.4.7, 290.000, v4/v6
+mst3k.interlinked.me, Up, 1.5.1, 818.000, v4/v6
+mstd.tokyo, Up, 1.5.1, 297.000, v4/v6
+mstdn-ac.ryukyu, Up, 1.5.1, 327.000, v4
+mstdn-babymetal.com, Up, 1.3.2, 770.000, v4
+mstdn-bike.net, Up, 1.5.1, 256.000, v4
+mstdn-d.info, Up, 1.6.0rc1, 294.000, v4
+mstdn-ff14.jp, Down, 404
+mstdn-football.jp, Up, 1.3.3, 183.000, v4
+mstdn-jp.site, Up, 1.5.1, 394.000, v4
+mstdn-kanazawa.jp, Up, 1.4.1, 186.000, v4
+mstdn-minpaku.jp, Up, 0.0.0, 214.000, v4
+mstdn-off.com, Up, 0.0.0, 255.000, v4
+mstdn-politics.com, Up, 1.2.2, 300.000, v4
+mstdn-pso2.online, Down, 000
+mstdn-server.jp, Down, 000
+mstdn-tech.jp, Down, 502
+mstdn-tw.com, Down, 000
+mstdn-uragi.jp, Up, 1.3.3, 237.000, v4
+mstdn-vn.com, Up, 1.4.6, 218.000, v4
+mstdn-workers.com, Up, 1.4.7, 190.000, v4
+mstdn.3mivon.net, Down, 000
+mstdn.7kry.net, Down, 000
+mstdn.9uelle.jp, Up, 1.4.6, 346.000, v4/v6
+mstdn.a-tak.com, Up, 1.5.0, 415.000, v4
+mstdn.anontown.com, Up, 0.0.0, 226.000, v4
+mstdn.aquaplus.jp, Up, 1.5.1, 189.000, v4/v6
+mstdn.archi, Up, 0.0.0, 1425.000, v4/ex
+mstdn.asami.red, Up, 1.5.0rc1, 409.000, v4
+mstdn.awa.sfc.keio.ac.jp, Up, 1.5.1, 255.000, v4/v6
+mstdn.awm.jp, Up, 1.3.3, 352.000, v4
+mstdn.ayano.jp, Down, 000
+mstdn.b-shock.org, Up, 1.5.1, 374.000, v4
+mstdn.barippi.com, Up, 1.5.1, 251.000, v4
+mstdn.beer, Up, 1.5.1, 478.000, v4
+mstdn.binfish.jp, Up, 1.5.1, 456.000, v4/v6
+mstdn.bizocean.co.jp, Up, 1.4.4, 231.000, v4
+mstdn.blue, Up, 1.4.6, 119.000, v4
+mstdn.bomucha.net, Up, 1.5.1, 1620.000, v4/v6
+mstdn.boxertwin.info, Up, 1.3.3, 254.000, v4
+mstdn.cafe, Up, 0.0.0, 460.000, v4
+mstdn.camera, Up, 0.0.0, 299.000, v4
+mstdn.cc, Up, 1.5.1, 562.000, v4/v6
+mstdn.cf, Up, 0.0.0, 358.000, v4
+mstdn.chiaroscuro.work, Up, 0.0.0, 493.000, v4
+mstdn.chogawa-bunko.com, Down, 404
+mstdn.chordwiki.org, Up, 1.5.1, 1119.000, v4/v6
+mstdn.cktec.net, Down, 000
+mstdn.club, Up, 1.5.1, 148.000, v4/v6
+mstdn.cosplayer.com, Up, 1.5.0rc1, 279.000, v4/v6
+mstdn.creatorsnight.com, Up, 1.4.1, 172.000, v4
+mstdn.d-sak.com, Up, 1.4.3, 410.000, v4/v6
+mstdn.dank.software, Up, 1.6.0rc1, 1611.000, v4
+mstdn.dasoran.net, Up, 1.3.2, 224.000, v4
+mstdn.debate.info-labs.jp, Up, 1.4.1, 671.000, v4
+mstdn.dream-seed.com, Down, 000
+mstdn.dyndns.org, Up, 1.4.3, 315.000, v4
+mstdn.ebi-fry306.net, Up, 1.5.1, 692.000, v4/v6
+mstdn.endurancesports.club, Up, 0.0.0, 170.000, v4
+mstdn.ernix.jp, Up, 1.4.7, 540.000, v4/v6
+mstdn.feelingso.blue, Up, 1.3.1, 244.000, v4
+mstdn.felice.biz, Up, 1.3.3, 278.000, v4/v6
+mstdn.felice.biz., Up, 1.3.3, 275.000, v4/v6
+mstdn.firstforest.jp, Up, 1.3.3, 301.000, v4
+mstdn.fm, Up, 1.4.1, 312.000, v4
+mstdn.fr, Up, 1.5.0, 1649.000, v4/v6
+mstdn.fujii-yuji.net, Up, 1.5.1, 1252.000, v4/v6
+mstdn.fukuoka.jp, Up, 1.3.3, 285.000, v4
+mstdn.fun, Down, 000
+mstdn.fy.to, Up, 0.0.0, 1280.000, v4
+mstdn.gaijinsize.com, Up, 0.0.0, 454.000, v4/v6
+mstdn.glorificatio.org, Up, 1.5.1, 288.000, v4/v6
+mstdn.golf, Up, 1.4.7, 791.000, v4
+mstdn.gots9713.xyz, Up, 1.5.1, 438.000, v4
+mstdn.goziline.com, Up, 0.0.0, 285.000, v4
+mstdn.guru, Up, 1.5.1, 501.000, v4
+mstdn.hakai-macaron.com, Down, 000
+mstdn.hanabi-life.net, Up, 0.0.0, 233.000, v4
+mstdn.haoyayoi.net, Up, 1.5.0, 522.000, v4
+mstdn.harusamex.com, Down, 500
+mstdn.hisurga.com, Up, 1.3.2, 536.000, v4
+mstdn.hokkaido.jp, Up, 1.5.1, 253.000, v4
+mstdn.ht164.jp, Up, 1.6.0rc4, 461.000, v4/v6
+mstdn.hyogo.jp, Up, 1.5.0, 266.000, v4
+mstdn.i-fromjapan.com, Up, 1.2.2, 326.000, v4
+mstdn.i-red.info, Up, 1.6.0rc4, 308.000, v4
+mstdn.ibaraki.jp, Up, 1.5.1, 1439.000, v4
+mstdn.idolhack.com, Up, 1.2.2, 703.000, v4
+mstdn.imoimo.xyz, Up, 1.4.7, 729.000, v4
+mstdn.intmax.jp, Down, 000
+mstdn.io, Up, 1.5.1, 1198.000, v4/v6
+mstdn.ipz.jp, Up, 1.3.3, 203.000, v4
+mstdn.it-infra.jp, Up, 0.0.0, 338.000, v4
+mstdn.jbc-s.net, Down, 000
+mstdn.jp, Up, 1.5.1, 195.000, v4/v6
+mstdn.juvenesco.eu, Down, 000
+mstdn.kanagu.info, Up, 1.6.0rc2, 281.000, v4/v6
+mstdn.kaonikki.tokyo, Up, 0.0.0, 273.000, v4
+mstdn.kemono-friends.info, Up, 1.6.0rc2, 1271.000, v4/v6
+mstdn.kidsblock.jp, Up, 1.3.3, 213.000, v4
+mstdn.klg-tree.jp, Up, 1.4.7, 205.000, v4/v6
+mstdn.kocko.org, Up, 0.0.0, 406.000, v4
+mstdn.kwmr.info, Up, 1.5.1, 719.000, v4
+mstdn.kwmr.me, Up, 1.5.1, 1129.000, v4/v6
+mstdn.lalafell.org, Up, 1.6.0rc1, 220.000, v4
+mstdn.lotty.jp, Up, 1.2.2, 261.000, v4
+mstdn.lyker.jp, Up, 1.6.0rc2, 1182.000, v4
+mstdn.madpainter.info, Up, 1.4.7, 349.000, v4
+mstdn.masuei.net, Up, 1.3.3, 242.000, v4/v6
+mstdn.maud.io, Up, 1.6.0rc4, 191.000, v4/v6
+mstdn.mechkey.jp, Up, 1.5.1, 282.000, v4/v6
+mstdn.media-trust.com, Down, 000
+mstdn.minarin.moe, Down, 000
+mstdn.mini4wd-engineer.com, Up, 1.5.1, 334.000, v4/v6
+mstdn.misosi.ru, Up, 1.4.1, 306.000, v4
+mstdn.mobilehackerz.jp, Up, 0.0.0, 418.000, v4
+mstdn.mochiwasa.xyz, Up, 1.5.1, 1330.000, v4/v6
+mstdn.moe-max.jp, Up, 1.5.0rc1, 391.000, v4/v6
+mstdn.monster-girl.homelinux.net, Up, 1.5.1, 768.000, v4/v6
+mstdn.muto.me, Down, 000
+mstdn.mx, Up, 1.5.1, 1047.000, v4
+mstdn.myzkstr.tech, Down, 000
+mstdn.nagasaki.jp, Up, 1.5.1, 200.000, v4
+mstdn.nakayuki.net, Up, 0.0.0, 614.000, v4/v6
+mstdn.nametaketakewo.net, Up, 0.0.0, 915.000, v4
+mstdn.nanamachi.net, Up, 1.5.1, 390.000, v4/v6
+mstdn.neigepluie.net, Up, 1.5.1, 344.000, v4
+mstdn.nemsia.org, Up, 1.5.1, 2796.000, v4
+mstdn.nere9.help, Up, 1.6.0rc1, 515.000, v4
+mstdn.neriko.net, Up, 1.3.3, 474.000, v4/v6
+mstdn.netaka.net, Down, 502
+mstdn.niigata.jp, Up, 1.4.7, 312.000, v4
+mstdn.nl, Up, 0.0.0, 1521.000, v4/v6
+mstdn.noritsuna.jp, Up, 1.5.1, 3330.000, v4
+mstdn.okayama.jp, Up, 1.5.0, 428.000, v4
+mstdn.okumin.com, Up, 0.0.0, 449.000, v4
+mstdn.omaera.org, Up, 1.5.1, 2257.000, v4/v6
+mstdn.onl, Up, 1.5.0, 1726.000, v4/v6
+mstdn.onosendai.jp, Up, 1.3.3, 205.000, v4
+mstdn.orangeliner.net, Up, 0.0.0, 200.000, v4
+mstdn.oresys.nagoya, Down, 000
+mstdn.osaka, Up, 1.4.7, 292.000, v4
+mstdn.otofu.xyz, Up, 1.4.0.3, 542.000, v4
+mstdn.poyo.me, Up, 1.5.1, 225.000, v4
+mstdn.roli.io, Down, 000
+mstdn.ropo.jp, Up, 1.6.0rc2, 300.000, v4
+mstdn.s6jr.com, Up, 1.4.1, 1465.000, v4
+mstdn.sanin.club, Up, 1.5.0rc1, 539.000, v4/ex
+mstdn.sanin.link, Up, 1.6.0rc4, 292.000, v4
+mstdn.seitaro.me, Down, 000
+mstdn.serv-ops.com, Up, 1.4.6, 297.000, v4
+mstdn.social, Up, 1.3.3, 209.000, v4/v6
+mstdn.soysoftware.net, Up, 1.5.1, 225.000, v4
+mstdn.studio, Up, 1.4.1, 358.000, v4
+mstdn.superspeed-fall.com, Up, 1.5.1, 213.000, v4
+mstdn.syaroshi.co, Down, 000
+mstdn.syoriken.org, Up, 1.4.1, 277.000, v4
+mstdn.syui.cf, Up, 1.6.0rc1, 958.000, v4/v6
+mstdn.t11i.jp, Down, 000
+mstdn.taiha.net, Up, 1.5.1, 214.000, v4/v6
+mstdn.taiyaki.online, Up, 1.6.0rc1, 526.000, v4/v6
+mstdn.tako774.net, Up, 1.4.6, 232.000, v4
+mstdn.techdrive.top, Up, 1.3.2, 1076.000, v4
+mstdn.tinko.club, Up, 0.0.0, 251.000, v4
+mstdn.toaruhetare.net, Up, 1.5.1, 345.000, v4
+mstdn.togawa.cs.waseda.ac.jp, Up, 0.0.0, 243.000, v4
+mstdn.tokyocameraclub.com, Up, 1.4.7, 387.000, v4
+mstdn.top, Up, 0.0.0, 580.000, v4
+mstdn.trashkids.org, Up, 1.5.1, 1151.000, v4/v6
+mstdn.uec.tokyo, Up, 1.3.3, 465.000, v4
+mstdn.voyage, Up, 0.0.0, 221.000, v4
+mstdn.web4u.jp, Down, 000
+mstdn.wildtree.jp, Up, 1.4.7, 574.000, v4
+mstdn.world, Down, 000
+mstdn.yantene.net, Up, 1.5.1, 650.000, v4
+mstdn.yjsnpi.nu, Up, 1.5.1, 319.000, v4
+mstdn.yoshimov.com, Up, 1.5.1, 1325.000, v4/v6
+mstdn.ytgrsua4.net, Up, 1.5.1, 270.000, v4
+mstdn.yuyat.jp, Up, 0.0.0, 398.000, v4
+mstdn.zuyadon.tk, Up, 1.4.7, 460.000, v4
+mstdn18.jp, Up, 1.3.3, 233.000, v4
+mstdn2017.club, Up, 1.5.1, 317.000, v4/ex
+mstdncafe.com, Down, 000
+mstdngirls.net, Up, 1.3.2, 344.000, v4
+mstdnsrv.moe.hm, Up, 1.6.0rc2, 320.000, v4
+mstdon.robox.org, Down, 000
+mstdona.net, Up, 0.0.0, 262.000, v4
+mstdoujin.net, Up, 1.5.1, 370.000, v4
+mtdn.jp, Up, 0.0.0, 347.000, v4
+mtgdon.jp, Up, 0.0.0, 260.000, v4
+music.pawoo.net, Up, 1.4.7, 487.000, v4
+musicdn.jp, Up, 1.4.7, 241.000, v4
+mustardon.tokyo, Up, 1.6.0rc2, 228.000, v4
+myd.kyoto.jp, Down, 000
+myfreckle.com, Up, 1.5.0, 939.000, v4/ex
+myles.life, Up, 1.5.1, 1215.000, v4/ex
+myriad.social, Up, 0.0.0, 1499.000, v4
+nagas.xyz, Down, 404
+nagayodon.com, Up, 0.0.0, 187.000, v4
+nagoyadon.jp, Up, 1.5.1, 468.000, v4
+nandon.cc, Up, 1.3.2, 210.000, v4
+naos.crypto.church, Up, 1.5.0, 1646.000, v4/v6
+natudon-fishing.net, Up, 1.3.3, 339.000, v4
+natudon-outdoor.net, Up, 0.0.0, 289.000, v4
+nearly.social, Up, 1.5.1, 891.000, v4
+neko.pics, Down, 500
+nerds.party, Up, 1.5.1, 1340.000, v4/v6
+neumastodon.com, Up, 0.0.0, 931.000, v4
+newsmastodon.com, Down, 000
+nfg.zone, Up, 1.5.1, 901.000, v4
+ngndn.jp, Up, 1.6.0rc1, 253.000, v4/v6
+nhk.jikkyo.tv, Up, 1.4.1, 236.000, v4
+nice.toote.rs, Up, 1.5.1, 1219.000, v4/v6
+nicodon.jp, Up, 0.0.0, 311.000, v4
+nicra.fr, Up, 1.4.1, 1683.000, v4
+niigata.minnna.xyz, Up, 0.0.0, 180.000, v4
+nijiato.nagoya, Up, 0.0.0, 329.000, v4
+nishinomiya.in.net, Up, 1.4.7, 465.000, v4
+nittc.tokyo, Down, 502
+niu.moe, Up, 1.6.0rc4, 1550.000, v4
+niwatoriman.me, Up, 1.5.0, 298.000, v4
+nkmr.paoru.jp, Up, 1.3.3, 235.000, v4
+noagendasocial.com, Up, 1.4.1, 875.000, v4/ex
+nobody.social, Up, 1.4.7, 1101.000, v4
+nodotsam.xyz, Up, 1.3.3, 1856.000, v4
+nog20.social, Down, 000
+noisebridge.social, Up, 0.0.0, 1189.000, v4/v6
+nomlishdon.racing-lagoon.info, Up, 1.2.2, 1400.000, v4
+nomofomo.social, Down, 000
+noupti.me, Up, 1.4.7, 1253.000, v4/v6
+nouseforsense.us, Down, 000
+novelist.nagoya, Down, 000
+now.kibousoft.co.jp, Up, 0.0.0, 676.000, v4/v6
+nrd.li, Up, 0.0.0, 923.000, v4/v6
+nsfw.finance, Up, 1.4.7, 1245.000, v4
+ntv.jikkyo.tv, Up, 1.4.1, 251.000, v4
+o.kagucho.net, Down, 500
+obitsudon.midyuki.net, Up, 1.5.1, 283.000, v4
+oc.todon.fr, Up, 1.4.7, 2584.000, v4/v6
+occitanie.social, Up, 1.4.4, 1833.000, v4
+octodon.social, Up, 1.5.1, 1098.000, v4/v6
+off-the-clock.us, Down, 500
+ofuton.io, Up, 1.5.1, 1335.000, v4/v6
+ohai.su, Down, 500
+ohmygod.social, Down, 000
+oknwdn.com, Up, 1.3.3, 2946.000, v4
+oldbytes.space, Up, 1.5.1, 1595.000, v4/v6
+omanko.porn, Up, 1.6.0rc4, 321.000, v4/v6
+omotesandon.com, Up, 0.0.0, 179.000, v4
+open2.ch, Up, 1.3.2, 328.000, v6
+oransns.com, Up, 1.5.1, 269.000, v4
+oreka.online, Up, 1.4.3, 2600.000, v4/v6
+oriwebdon.com, Up, 1.4.1, 547.000, v4
+orlando.community, Up, 1.4.3, 972.000, v4/v6
+ostatus.axross.io, Down, 000
+ostatus.blessedgeeks.jp, Up, 1.6.0rc1, 190.000, v4/v6
+ostatus.blessedgeeks.org, Up, 1.6.0rc1, 213.000, v4/v6
+ostatus.ikeji.ma, Up, 1.4.7, 2505.000, v4
+ostatus.isidai.com, Up, 1.4.7, 263.000, v4
+ostatus.noviiro.me, Down, 000
+ostatus.renken.is, Up, 1.5.0, 1033.000, v4
+ostatus.shade3d.jp, Up, 1.4.1, 478.000, v4
+ostatus.taiyolab.com, Up, 1.5.0rc1, 1222.000, v4
+ostatus.yajamon.xyz, Up, 1.3.2, 445.000, v4
+otajodon.com, Up, 0.0.0, 167.000, v4
+otogamer.me, Up, 1.6.0rc4, 331.000, v4/v6
+otoya.space, Up, 1.5.1, 195.000, v4/v6
+oulipo.social, Up, 0.0.0, 917.000, v4/v6
+p-worldon.com, Down, 000
+pachi.house, Up, 0.0.0, 211.000, v4/v6
+pachislodon.net, Down, 000
+pachyder.me, Up, 1.4.3, 1625.000, v4/v6
+pao.moe, Up, 1.6.0rc4, 235.000, v4/v6
+paoon.club, Up, 1.5.0, 264.000, v4
+paors.lv, Down, 502
+paoru.jp, Up, 1.3.3, 241.000, v4/v6
+paotter.com, Down, 000
+park.eldoom.me, Down, 000
+party.ochakai.moe, Up, 1.5.1, 435.000, v4/v6
+party.personal.pizza, Up, 0.0.0, 1114.000, v4
+pawoo.net, Up, 1.4.7, 126.000, v4
+pdx.social, Up, 1.5.1, 729.000, v4
+pegelinux.ga, Down, 526
+persadon.com, Up, 1.5.1, 1230.000, v4/v6
+photodn.net, Up, 1.4.3, 184.000, v4
+photog.social, Up, 1.5.1, 1092.000, v4/v6
+physi.cc, Down, 404
+pkkm.me, Up, 0.0.0, 194.000, v4
+plasticmodels.tokyo, Up, 1.4.3, 559.000, v4/v6
+pleasehug.me, Up, 1.4.3, 1675.000, v4/v6
+pochi46.com, Up, 1.5.1, 284.000, v4
+podcast.style, Up, 1.5.1, 344.000, v4/v6
+politebot.com, Up, 0.0.0, 911.000, v4
+porntoot.com, Up, 0.0.0, 737.000, v4/v6
+pouet.apdu.fr, Up, 1.5.1, 2609.000, v4/v6
+pouet.chouech.org, Up, 1.4.3, 1674.000, v4
+pouet.couchet.org, Up, 1.5.1, 1705.000, v4
+pouet.dachary.org, Up, 0.0.0, 1647.000, v4
+pouet.it, Up, 1.5.1, 3101.000, v4
+pouet.meutel.net, Up, 1.5.1, 1600.000, v4/v6
+pouet.panglossoft.fr, Up, 1.5.0, 1635.000, v4/v6
+pouet.sbaron.fr, Down, 000
+pouet.social, Up, 1.3.3, 1341.000, v4
+pouet.yolops.net, Up, 1.5.1, 1331.000, v4/v6
+pouets.ovh, Up, 1.4.7, 1654.000, v4/v6
+precure.ml, Up, 1.5.1, 213.000, v4
+presidentielle.tech, Up, 0.0.0, 1572.000, v4
+pritter.tk, Up, 0.0.0, 299.000, v4
+pso2.club, Up, 1.4.7.union, 405.000, v4/v6
+pteranodon.net, Down, 000
+pwning.social, Down, 000
+qiitadon.com, Up, 1.4.7, 289.000, v4
+queer.town, Up, 1.5.1, 1255.000, v4/v6
+quimas.work, Up, 0.0.0, 329.000, v4
+quizdon.com, Up, 1.4.1, 465.000, v4/v6
+qwerty.city, Down, 000
+raccoon.network, Up, 1.5.1, 854.000, v4/ex
+rafting.io, Up, 1.4.1, 733.000, v4
+ramendon.jp, Up, 1.3.3, 341.000, v4
+ranobe.net, Up, 1.6.0rc2, 201.000, v4/v6
+real-escape.jp, Up, 1.5.1, 278.000, v4
+recode.macro.tokyo, Up, 1.3.3, 232.000, v4
+recode.macro.tokyo/, Up, 1.3.3, 251.000, v4
+redwombat.social, Up, 1.5.1, 909.000, v4
+reseau.education, Up, 1.5.0, 1732.000, v4
+resipsa.social, Down, 404
+resistodon.com, Up, 0.0.0, 963.000, v4/ex
+reveal.today, Down, 000
+rich.gop, Up, 1.5.1, 1776.000, v4
+rikadon.club, Up, 1.6.0rc2, 147.000, v4
+risingsun.red, Up, 1.5.1, 179.000, v4
+ro-mastodon.puyo.jp, Up, 1.5.1, 347.000, v4
+romandie.social, Up, 0.0.0, 1692.000, v4
+rubber.social, Up, 1.5.1, 913.000, v4/v6
+rugdon.fun, Up, 1.3.2, 204.000, v4
+rx14.co.uk, Down, 404
+rxt.social, Down, 404
+s.brined.fish, Up, 1.5.0rc1, 1785.000, v4/v6
+s.dat.cloud, Down, 500
+s.maximeborg.es, Up, 1.4.6, 1414.000, v4/ex
+s.neguse.net, Up, 1.5.1, 338.000, v4/v6
+s.ovalerio.net, Up, 1.5.1, 1319.000, v4
+saigodon.jp, Up, 1.4.7, 469.000, v4
+saitama-stdn.com, Up, 1.3.2, 235.000, v4
+sakaba.space, Up, 1.3.3, 369.000, v4
+sakoku.jp, Up, 1.5.1, 260.000, v4
+sanam.xyz, Up, 1.5.1, 606.000, v4
+sandbox.skoji.jp, Up, 1.6.0rc2, 227.000, v4/v6
+satocc.biz, Up, 1.3.3, 330.000, v4
+saunner.com, Up, 0.0.0, 253.000, v4
+scalie.club, Up, 1.5.1, 859.000, v4
+scholar.social, Up, 1.5.1, 1564.000, v4/v6
+schuppentier.org, Up, 1.4.7, 1484.000, v4/ex
+scifi.fyi, Up, 1.6.0rc1, 1143.000, v4/v6
+scotland.computer, Up, 0.0.0, 1714.000, v4
+scuba.masdon.life, Down, 000
+sdfn-01.ninjawedding.org, Up, 1.6.0rc2+glitchsoc, 1381.000, v4/v6
+sdmesh.social, Up, 1.4.6, 838.000, v4
+securitymastod.one, Up, 1.4.0.6, 895.000, v4
+sedryk.info, Up, 1.5.1, 1418.000, v4
+selfy.army, Up, 1.5.1, 1139.000, v4
+senridon.com, Down, 000
+setagaya.place-life.com, Down, 503
+shadowsynth.xyz, Down, 502
+shadowverse-mstdn.jp, Up, 1.2.2, 1733.000, v4
+share.elouworld.org, Up, 1.5.1, 1423.000, v4/v6
+shelter.moe, Up, 1.5.0, 1594.000, v4/v6
+shigadon.com, Up, 1.4.6, 1309.000, v4
+shigezen.com, Up, 1.3.3, 355.000, v4
+shigyoudon.jp, Up, 1.3.3, 339.000, v4
+shimaidon.net, Up, 1.5.1, 316.000, v4
+shimokita.social, Up, 1.5.0rc3, 1443.000, v4
+shintarokurachi.tokyo, Down, 000
+shkval.net, Up, 1.5.1, 200.000, v4
+siege.rhino.cards, Up, 0.0.0, 306.000, v4
+simstim.club, Up, 1.3.3, 1298.000, v4
+sldon.com, Up, 1.5.1, 411.000, v4
+sldon.jp, Up, 1.4.6, 390.000, v4
+sleeklounge.com, Up, 1.5.1, 1302.000, v4/v6
+slime.global, Up, 1.5.1, 1860.000, v4
+sn.angry.im, Up, 1.5.1, 2673.000, v4/v6
+snabeltann.no, Up, 1.4.3, 1864.000, v4
+sns.gdgd.jp.net, Up, 1.6.0rc1, 197.000, v4
+soc.bckly.com, Down, 000
+soc.ialis.me, Up, 1.6.0rc2, 2628.000, v4/v6
+socia.esperant.io, Down, 000
+social.0day.agency, Down, 000
+social.0x80.org, Down, 000
+social.48bin.net, Up, 1.5.0, 314.000, v4
+social.adlerweb.info, Up, 0.0.0, 1668.000, v4/v6
+social.alabasta.net, Up, 1.3.3, 1435.000, v4
+social.alex73630.xyz, Up, 1.5.0, 1629.000, v4/v6
+social.alifein.tech, Up, 0.0.0, 2002.000, v4
+social.allthefallen.ninja, Down, 404
+social.apreslanu.it, Up, 1.3.3, 1481.000, v4
+social.arbleizez.bzh, Up, 1.4.7, 1656.000, v4
+social.arnip.org, Up, 1.5.1 -> 1.5.0, 359.000, v4/v6
+social.atypique.net, Up, 1.5.1, 4362.000, v4
+social.backtick.town, Up, 1.4.3, 1513.000, v4/v6
+social.ballpointcarrot.net, Up, 1.6.0rc1, 781.000, v4
+social.becauseofprog.fr, Down, 404
+social.bluecore.net, Up, 1.6.0rc1, 716.000, v4/v6
+social.bytesexual.net, Up, 0.0.0, 1708.000, v4
+social.bytestemplar.com, Up, 1.3.3, 1484.000, v4
+social.bzh, Up, 1.3.2, 1673.000, v4/v6
+social.celabs.com, Up, 0.0.0, 993.000, v4
+social.chilliet.eu, Up, 1.4.6, 1605.000, v4/ex
+social.chinwag.im, Up, 1.5.0, 1175.000, v4/v6
+social.chronal.net, Down, 000
+social.collabora.digital, Down, 000
+social.conglomer.net, Up, 1.4.7, 1040.000, v4/v6
+social.coop, Up, 1.5.0, 1532.000, v4
+social.csswg.org, Up, 1.5.1, 886.000, v4/v6
+social.d0p1.eu, Up, 1.5.1, 1582.000, v4
+social.depertat.net, Up, 1.4.7, 1975.000, v4
+social.devio.us, Up, 1.3.3, 1096.000, v4
+social.devloprog.org, Up, 1.5.1, 1490.000, v4
+social.diskseven.com, Up, 1.6.0rc2, 1382.000, v4/v6
+social.driou.tech, Down, 404
+social.dropbear.xyz, Up, 1.5.1, 796.000, v4/v6
+social.etc-services.de, Up, 1.4.0.3, 1777.000, v4
+social.eyraud.net, Down, 000
+social.gbox.work, Down, 000
+social.gemuplay.com, Down, 500
+social.gestaltzerfall.net, Up, 1.5.0, 2508.000, v4
+social.gextreme.com, Up, 1.3.2, 761.000, v4
+social.glados.ch, Up, 1.4.3, 1352.000, v4/v6
+social.guimik.fr, Down, 000
+social.homunyan.com, Up, 1.5.1, 671.000, v4/v6
+social.hyuki.net, Up, 1.4.7, 313.000, v4
+social.ill.fi, Down, 000
+social.imchip.be, Down, 404
+social.imirhil.fr, Up, 1.5.1, 1620.000, v4/v6
+social.infranix.eu, Up, 1.5.1, 1424.000, v4/ex
+social.irrwitz.com, Up, 1.5.1, 1461.000, v4
+social.jasongreen.net, Down, 404
+social.java.nrw, Up, 0.0.0, 1427.000, v4
+social.jdiez.me, Up, 0.0.0, 1177.000, v4
+social.k40s.net, Down, 000
+social.katarpilar.com, Up, 1.5.1, 2849.000, v4
+social.keenfamily.us, Up, 1.3.2, 1109.000, v4
+social.kimamass.com, Up, 1.5.1, 1690.000, v4
+social.konosuke.jp, Up, 1.5.1, 437.000, v4/v6
+social.lafermenumerique.com, Up, 1.5.0, 1385.000, v4/v6
+social.lasanha.org, Up, 1.5.1, 1010.000, v4/v6
+social.lavolte.net, Down, 000
+social.lecker.coffee, Down, 401
+social.lgy.fr, Up, 1.4.6, 2858.000, v4/v6
+social.linss.com, Up, 1.5.1, 1283.000, v4/v6
+social.lkw.tf, Up, 1.5.1, 1834.000, v4
+social.logilab.org, Up, 1.4.3, 2829.000, v4
+social.lou.lt, Up, 1.5.1, 2612.000, v4/v6
+social.magnier.io, Down, 404
+social.mastodon.com.au, Up, 1.4.6, 1076.000, v4/v6
+social.matsuuratomoya.com, Up, 1.4.3, 847.000, v4/v6
+social.myconan.net, Up, 1.4.3, 320.000, v4/v6
+social.nah.re, Up, 1.6.0rc1, 1365.000, v4/v6
+social.nasqueron.org, Up, 1.4.0.3, 1185.000, v4/v6
+social.nassi.me, Up, 0.0.0, 1487.000, v4
+social.nekoruri.jp, Down, 000
+social.nervestaple.com, Up, 0.0.0, 880.000, v4
+social.noff.co, Up, 1.6.0rc2, 789.000, v4
+social.nofftopia.com, Up, 1.6.0rc2, 841.000, v4/v6
+social.noisyspot.jp, Down, 404
+social.noostache.fr, Up, 1.3.2, 1384.000, v4/v6
+social.nowa.re, Up, 0.0.0, 2697.000, v4
+social.numerama.com, Up, 1.4.3, 1768.000, v4
+social.otya.me, Down, 502
+social.oupsman.fr, Up, 1.5.1, 1403.000, v4
+social.over-world.org, Up, 1.5.1, 1758.000, v4
+social.paco.to, Down, 502
+social.paddlefish.net, Down, 404
+social.petko.me, Up, 1.6.0rc1, 1421.000, v4/v6
+social.ponyfrance.net, Up, 1.4.7, 1504.000, v4
+social.pop42.net, Down, 000
+social.pretzlaff.co, Up, 1.4.2, 2725.000, v4/ex
+social.pueseso.club, Up, 1.5.1, 1862.000, v4
+social.qunagi.net, Up, 1.5.1, 250.000, v4/v6
+social.rbs.io, Up, 1.5.1, 1160.000, v4
+social.sitedethib.com, Up, 1.6.0rc4, 3158.000, v4/v6
+social.snargol.com, Up, 1.5.1, 1358.000, v4/v6
+social.spiwit.net, Up, 0.0.0, 2608.000, v4/v6
+social.strog.org, Up, 1.5.1, 808.000, v4
+social.svallee.fr, Up, 1.5.1, 1637.000, v4/v6
+social.taker.fr, Up, 1.5.0, 1127.000, v4/v6
+social.targaryen.house, Up, 1.6.0rc2, 2747.000, v4/v6
+social.tchncs.de, Up, 1.5.1, 1730.000, v4
+social.tcit.fr, Up, 1.6.0rc4, 1679.000, v4/v6
+social.tedkulp.com, Down, 502
+social.tictech.info, Down, 404
+social.tinysubversions.com, Up, 1.3.3, 843.000, v4
+social.touha.me, Up, 1.6.0rc1, 2663.000, v4/v6
+social.troll.academy, Up, 1.5.1, 1410.000, v4/v6
+social.vincentux.fr, Up, 1.5.1, 1744.000, v4
+social.weho.st, Up, 1.4.7, 4638.000, v4/v6
+social.wxcafe.net, Up, 1.5.1, 2614.000, v4/v6
+social.yournearestbar.com, Up, 1.4.6, 839.000, v4/ex
+socialcs.xyz, Down, 000
+socialgame.mstdn.cloud, Up, 1.3.2, 203.000, v4
+socially.constructed.space, Up, 1.4.7, 954.000, v4
+socialtuna.net, Down, 000
+society.oftrolls.com, Up, 1.5.1, 2699.000, v4/v6
+solo-outdon.club, Up, 1.3.2, 270.000, v4
+somewhy.com, Down, 000
+spacejerk.fr, Down, 404
+spacerock.jp, Down, 000
+spanner.works, Up, 1.5.1, 1090.000, v4/v6
+spicychicken.club, Up, 0.0.0, 1153.000, v4
+spod.ca, Up, 1.4.7, 1126.000, v4/v6
+spooky.pizza, Up, 1.4.0.6, 992.000, v4
+sportsdon.t11i.jp, Down, 000
+st.3ends.info, Down, 502
+startup-mstdn.com, Down, 000
+status.bcarlin.net, Up, 1.3.3, 1406.000, v4
+status.dissidence.ovh, Up, 1.6.0rc2, 1625.000, v4/v6
+status.ldjb.uk, Up, 1.3.3, 4824.000, v4
+status.lullis.net, Down, 404
+status.pointless.one, Up, 1.5.1, 1148.000, v4
+status.unixmail.fr, Down, 000
+subculdon.com, Up, 0.0.0, 441.000, v4
+such.social, Up, 1.5.0rc3, 247.000, v4/v6
+summoners-riftodon.jp, Up, 1.3.2, 288.000, v4/ex
+sunshinegardens.org, Up, 1.5.1, 1301.000, v4/v6
+super-famicom.com, Down, 404
+swast.club, Down, 000
+syachiku.net, Down, 500
+symphogear-don.m.to, Down, 000
+sys.kawi.fr, Up, 1.4.7, 1798.000, v4
+t.con.sh, Up, 1.6.0rc1, 695.000, v4/v6
+t.d65.xyz, Down, 502
+tablegame.mstdn.cloud, Up, 1.3.2, 188.000, v4
+takahashi.social, Up, 0.0.0, 206.000, v4
+tali.t0k.org, Up, 1.5.0, 1484.000, v4/v6
+taruntarun.net, Up, 1.6.0rc4, 449.000, v4
+tbs.jikkyo.tv, Up, 1.4.1, 259.000, v4
+teamtk.eu, Up, 1.4.7, 1179.000, v4
+techn.ical.ist, Up, 1.5.1, 1395.000, v4
+technologeek.me, Up, 1.2.2, 192.000, v4
+tegedon.net, Up, 1.6.0rc1, 240.000, v4
+teitoku.to, Down, 404
+tekkadan.me, Down, 000
+tekkadon.manimani.cc, Up, 1.5.1, 249.000, v4
+tenforward.social, Up, 1.5.1, 810.000, v4/v6
+teo.taiha.net, Up, 1.6.0rc4, 270.000, v4/v6
+tescher.me, Up, 0.0.0, 567.000, v4/v6
+tetsugaku.place, Up, 1.4.7, 150.000, v4
+tgp.jp, Up, 1.3.3, 421.000, v4/ex
+the.wired.sehol.se, Up, 1.5.1, 1367.000, v4/ex
+thecave.social, Down, 000
+theferret.social, Up, 1.5.1, 1371.000, v4/v6
+thepractice.space, Down, 502
+thinkers.ac, Up, 1.3.3, 325.000, v4
+this.feelslike.life, Down, 000
+tinat.fun, Down, 000
+tinnies.club, Up, 0.0.0, 893.000, v4
+tiny.tilde.website, Up, 1.5.1, 2909.000, v4
+todon.nl, Up, 1.6.0rc2, 1664.000, v4/v6
+tokamstdn.jp, Up, 1.6.0rc2, 224.000, v4
+tokyo.mastodon-servers.net, Up, 0.0.0, 348.000, v4
+tokyomx.jikkyo.tv, Up, 1.4.1, 244.000, v4
+tooot.im, Up, 1.4.7, 1591.000, v4/ex
+toot-lab.reclaim.technology, Up, 1.5.1, 1036.000, v4/v6
+toot.aquilenet.fr, Up, 1.5.1, 2751.000, v4/v6
+toot.berlin, Up, 1.3.3, 1683.000, v4
+toot.blue, Up, 1.5.1, 808.000, v4
+toot.cafe, Up, 1.5.1, 777.000, v4
+toot.cat, Up, 1.5.1, 1149.000, v4
+toot.forumanalogue.fr, Down, 500
+toot.gibberfish.org, Up, 0.0.0, 1211.000, v4
+toot.kashishokunin.com, Up, 1.5.1, 449.000, v4/v6
+toot.krinetzki.de, Down, 500
+toot.lmorchard.com, Up, 1.5.1, 1113.000, v4
+toot.love, Up, 1.5.1, 1619.000, v4/v6
+toot.matereal.eu, Up, 1.5.1, 1372.000, v4/v6
+toot.memtech.website, Up, 1.5.0, 1324.000, v4/v6
+toot.mst-dn.me, Down, 000
+toot.oekaki.st, Up, 1.5.1, 794.000, v4
+toot.ordinarius-fectum.net, Up, 1.5.0, 290.000, v4/ex
+toot.playgames.jp, Down, 000
+toot.pm, Up, 1.3.3, 2654.000, v4/v6
+toot.psyco.fr, Up, 1.6.0rc2, 1652.000, v4
+toot.redmine.jp, Up, 1.5.1, 232.000, v4
+toot.tibidoo.com, Down, 000
+toot.tzim.net, Up, 1.5.1, 2656.000, v4/v6
+toot.works, Down, 000
+toot.yukimochi.jp, Up, 1.6.0rc4, 308.000, v4
+tooter.fr, Down, 000
+tooting.intensifi.es, Up, 1.4.7, 2784.000, v4
+tootplanet.space, Up, 1.6.0rc1, 1284.000, v4/v6
+toots.corzntin.fr, Down, 000
+topbol.com, Down, 526
+torontomusic.cloud, Down, 404
+tradon.jp, Down, 000
+training-fitness.fun, Up, 0.0.0, 353.000, v4
+trickle.ink, Up, 1.3.3, 1694.000, v4
+trunk.mad-scientist.club, Up, 1.6.0rc4, 1251.000, v4/v6
+tsunanmstdn.jp, Down, 000
+tsuruga.net, Up, 1.3.2, 300.000, v4
+tuner.1242.com, Up, 1.3.3, 168.000, v4
+tusk.schoollibraries.net, Up, 1.5.1, 1211.000, v4
+tusk.social, Up, 1.3.2, 1061.000, v4/v6
+tusk.what.re, Up, 1.4.4, 1426.000, v4
+tutut.delire.party, Up, 1.5.1, 1338.000, v4
+tvasahi.jikkyo.tv, Up, 1.4.1, 294.000, v4
+tvdon.rt-trend.jp, Up, 1.2.2, 365.000, v4
+tvdon.tv, Up, 1.4.6, 337.000, v4
+twingyeo.kr, Up, 1.5.1, 238.000, v4/v6
+twit.jp, Down, 503
+twitterchan.net, Up, 1.3.3, 1439.000, v4
+ue4-mstdn.tokyo, Up, 1.3.2, 332.000, v4
+ukrainian.social, Up, 1.3.2, 1305.000, v4/v6
+uldhaar.dk, Up, 1.5.1, 1779.000, v4
+umastodon.jp, Up, 1.5.1, 335.000, v4
+un.lobi.to, Up, 1.6.0rc4, 1315.000, v4
+under-bank.blue, Up, 1.5.1, 260.000, v4/ex
+unityjp-mastodon.tokyo, Up, 1.5.1, 930.000, v4/ex
+unixcorn.xyz, Up, 1.6.0rc1, 2617.000, v4/v6
+unnerv.jp, Up, 1.4.7, 222.000, v4
+urawareds.org, Up, 1.4.7, 234.000, v4
+urvogel.club, Up, 1.4.7, 1560.000, v4/v6
+utodon.jp, Up, 1.3.1, 871.000, v4
+vapers.jp, Up, 1.5.1, 428.000, v4/ex
+vastodon.com, Up, 1.4.7, 184.000, v4
+veah.cocoa.moe, Up, 1.3.3, 526.000, v4/v6
+vkdn.jp, Up, 1.3.3, 614.000, v4
+vm.mstdn.media, Down, 000
+vmrpc.net, Up, 1.6.0rc2, 260.000, v4/v6
+vocalodon.net, Up, 1.4.7, 260.000, v4
+vocalomakets.jp, Up, 0.0.0, 281.000, v4
+voe.social, Up, 1.4.7, 2630.000, v4/v6
+voiceofcomputer.xyz, Up, 0.0.0, 515.000, v4
+vulpine.club, Up, 1.5.1, 2370.000, v4/v6
+wandering.shop, Up, 0.0.0, 986.000, v4
+waraiotoko.net, Up, 1.6.0rc2, 493.000, v4/v6
+warubure.online, Up, 1.5.1, 250.000, v4
+wasteland.pro, Up, 1.5.0, 1227.000, v4/v6
+weaselshit.com, Down, 502
+webcommunity.club, Up, 0.0.0, 998.000, v4
+webdevnerds.tech, Down, 000
+wellness.so, Up, 1.4.6, 4378.000, v4/ex
+whiplashprinciples.club, Up, 0.0.0, 1127.000, v4/v6
+witches.academy, Down, 000
+witches.town, Up, 1.6.0rc2, 1612.000, v4/v6
+wizfox.jp, Up, 1.3.2, 701.000, v4/v6
+wmdon.jp, Down, 404
+wogan.im, Up, 0.0.0, 2625.000, v4
+wowsdon.xyz, Up, 1.5.1, 1587.000, v4/v6
+writing.exchange, Up, 1.5.1, 1341.000, v4/v6
+wsup.social, Down, 000
+www.ksu-mastodon.com, Up, 1.3.1, 294.000, v4
+www.mikuappend.com, Down, 000
+www.mofgao.space, Up, 1.6.0rc1, 760.000, v4/v6
+www.mstddntfdn.online, Up, 1.5.1, 1736.000, v4
+www.nekotodon.com, Up, 1.6.0rc4, 293.000, v4
+www.owlparliament.com, Up, 0.0.0, 1131.000, v4
+www.seiyu-mstdn.club, Down, 000
+x0r.be, Up, 1.5.0, 1122.000, v4/v6
+xmstdn.com, Up, 1.3.3, 1085.000, v4
+xn--twttr-7raz.com, Up, 1.2.2, 984.000, v4
+xn--wmq.jp, Up, 1.5.1, 1147.000, v4
+xn--zck4ad5f2e.jp, Up, 0.0.0, 239.000, v4/ex
+xn--zck4azd638n.com, Down, 000
+xn--zckuao5dze.jp, Up, 0.0.0, 219.000, v4/ex
+xoxo.zone, Up, 1.4.1, 1108.000, v4
+yakult.style, Up, 1.4.1, 201.000, v4
+yakyudon.net, Up, 1.4.1, 233.000, v4
+yamastodon.jp, Up, 1.3.3, 214.000, v4
+yiff.fyi, Up, 0.0.0, 866.000, v4
+yomidon.okinawa, Up, 1.2.2, 1236.000, v4
+yontengop.com, Up, 1.4.1, 257.000, v4
+yooidon.jp, Up, 0.0.0, 191.000, v4
+yoshis.woolly.world, Down, 404
+yso.pet, Up, 1.5.0, 1819.000, v4
+yudetarou.club, Up, 1.5.1, 248.000, v4
+yukari.cloud, Up, 1.6.0rc4, 449.000, v4
+yukarin.club, Up, 1.4.7, 185.000, v4
+yuki.tech, Up, 0.0.0, 761.000, v4
+z-socialgame.mstdn.cloud, Up, 1.3.2, 157.000, v4
+ziroh.be, Up, 1.6.0rc2, 1816.000, v4
