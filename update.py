@@ -26,10 +26,12 @@ def get_watching_uri():
      print(row["uri"])
 
 def get_exsistence(uri):
-  get_list = db.prepare("SELECT count(*) FROM list WHERE uri = $1")
+  get_list = db.prepare("SELECT uri FROM list WHERE uri = $1 EXCEPT SELECT uri FROM disabled WHERE uri = $1")
   with db.xact():
+    rows = 0
     for row in get_list( uri ):
-      return row[0]
+      rows += 1
+    return rows
 
 def get_version(uri):
   get_list = db.prepare("SELECT version FROM list WHERE uri = $1")
@@ -41,6 +43,7 @@ def get_version(uri):
       return row["version"]
     else:
       return '0.0.0'
+
 def get_mean_delay(uri, delay):
   get_list = db.prepare('SELECT delay FROM list WHERE uri = $1')
   with db.xact():
@@ -59,7 +62,8 @@ def insert_uri(uri):
 # if status is Up
 def update_status_up(uri, status, version, delay, ipv6):
   if get_exsistence(uri) != 1:
-    insert_uri(uri)
+    return
+#    insert_uri(uri)
   delay = get_mean_delay(uri, delay)
   # if version are updated
   old = get_version(uri).strip()
@@ -77,7 +81,8 @@ def update_status_up(uri, status, version, delay, ipv6):
 # if status is Down
 def update_status_down(uri, status):
   if get_exsistence(uri) != 1:
-    insert_uri(uri)
+    return
+#    insert_uri(uri)
   update_list = db.prepare("UPDATE list SET status = $2 WHERE uri = $1")
   update_list(uri, status)
 
@@ -120,7 +125,11 @@ while line:
       update_status_up(uri, True, version, delay, ipv6)
     else:
       update_status_down(uri, False)
-  line = f.readline()
+  try:
+    line = f.readline()
+  # read more next line if exception has occured
+  except:
+    line = f.readline()
   time.sleep(0.01)
 f.close
 
