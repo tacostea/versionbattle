@@ -1,5 +1,7 @@
 result.txt
 scrape.txt
+ssl-exp.txt
+instances.list
 ~*
 _*
 *.secret
