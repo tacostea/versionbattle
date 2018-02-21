@@ -29,6 +29,7 @@ function scrape() {
     USERS=$(echo $RESULT | xmllint --html --xpath "/html/body/div/div/div[1]/div[2]/div[1]/strong" - 2>/dev/null | sed -e 's/<[^>]*>//g' | sed -e 's/[, ]//g')
     STATUSES=$(echo $RESULT | xmllint --html --xpath "/html/body/div/div/div[1]/div[2]/div[2]/strong" - 2>/dev/null | sed -e 's/<[^>]*>//g' | sed -e 's/[, ]//g')
     CONNS=$(echo $RESULT | xmllint --html --xpath "/html/body/div/div/div[1]/div[2]/div[3]/strong" - 2>/dev/null | sed -e 's/<[^>]*>//g' | sed -e 's/[, ]//g')
+  #else if api available 
   else
     USERS=$(echo $RESULT | xmllint --html --xpath "/html/body/div/div[2]/div/div[1]/div[1]/strong" - 2>/dev/null | sed -e 's/<[^>]*>//g' | sed -e 's/[, ]//g')
     STATUSES=$(echo $RESULT | xmllint --html --xpath "/html/body/div/div[2]/div/div[1]/div[2]/strong" - 2>/dev/null | sed -e 's/<[^>]*>//g' | sed -e 's/[, ]//g')
@@ -37,21 +38,21 @@ function scrape() {
 
   echo "$DOMAIN, $USERS, $STATUSES, $CONNS, $REG" >> "scrape.txt"
 }
+export -f scrape
 
 function crawl() {
   DOMAIN=$1
   if [ "$DOMAIN" == "" ]; then return 1; fi
   LINK="https://$DOMAIN/api/v1/instance"
-  RESULT=$(curl -6 -m 5 -kL $LINK -w "\ntime=%{time_total} code=%{http_code}" 2>/dev/null)
+  RESULT=$(curl -6 -m 5 -kL $LINK 2>/dev/null)
   CODE=$?
   VER=$(echo $RESULT | jq -r '.version' 2>/dev/null)
-  TIME=$(echo "$(echo $RESULT | grep "time=" | sed -r 's/.*time=([0-9]+\.[0-9]+) code=([0-9]{3}$)/\1/') * 1000" | bc)
-  STATUS=$(echo $RESULT |grep "time="| sed -r 's/.*time=([0-9]+\.[0-9]+) code=([0-9]{3})$/\2/')
+  TIME=$(echo "$(curl -6 -m 5 -o /dev/null --silent --head -w "%{time_total}\n" $LINK -o /dev/null) * 1000" | bc)
+  STATUS=$(curl -6 -m 5 -o /dev/null --silent --head -w "%{http_code}\n" $LINK -o /dev/null)
   
   # pass v6
   if [ "$STATUS" == "200" ]; then
-    RESULT=$(curl -4 -m 5 -kL $LINK -w "\ntime=%{time_total} code=%{http_code}" 2>/dev/null)
-    STATUS=$(echo $RESULT |grep "time="| sed -r 's/.*time=([0-9]+\.[0-9]+) code=([0-9]{3})$/\2/')
+    STATUS=$(curl -4 -m 5 -o /dev/null --silent --head -w "%{http_code}\n" $LINK -o /dev/null)
     scrape $DOMAIN
     # pass v4/v6
     if [ "$STATUS" == "200" ]; then
@@ -70,10 +71,10 @@ function crawl() {
     fi
   # cannot pass v6
   else
-    RESULT=$(curl -4 -m 5 -kL $LINK -w "\ntime=%{time_total} code=%{http_code}" 2>/dev/null)
+    RESULT=$(curl -4 -m 5 -kL $LINK 2>/dev/null)
     VER=$(echo $RESULT | jq -r '.version' 2>/dev/null)
-    TIME=$(echo "$(echo $RESULT | grep "time=" | sed -r 's/.*time=([0-9]+\.[0-9]+) code=([0-9]{3}$)/\1/') * 1000" | bc)
-    STATUS=$(echo $RESULT |grep "time="| sed -r 's/.*time=([0-9]+\.[0-9]+) code=([0-9]{3})$/\2/')
+    TIME=$(echo "$(curl -4 -m 5 -o /dev/null --silent --head -w "%{time_total}\n" $LINK -o /dev/null) * 1000" | bc)
+    STATUS=$(curl -4 -m 5 -o /dev/null --silent --head -w "%{http_code}\n" $LINK -o /dev/null)
     # pass v4 only
     if [ "$STATUS" == "200" ]; then
       scrape $DOMAIN
@@ -92,17 +93,17 @@ function crawl() {
       fi
     # cannot connect
     else
-      echo "$DOMAIN, Down, $STATUS" >> result.txt
+      if [[ "$STATUS" =~ [0-9]{3} ]]; then
+        echo "$DOMAIN, Down, $STATUS" >> result.txt
+      fi
     fi
   fi
   sort result.txt -o result.txt
 }
+export -f crawl
 
 echo -n > result.txt
 echo -n > scrape.txt
-
-export -f crawl
-export -f scrape
 
 if [ -f instances.list ]; then
   xargs -n1 -P$PROC -I % bash -c "crawl $INSTANCE %" < instances.list
