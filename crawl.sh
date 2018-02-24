@@ -102,8 +102,8 @@ function crawl() {
 }
 export -f crawl
 
-echo -n > result.txt
-echo -n > scrape.txt
+mv result.txt result.txt.log
+mv scrape.txt scrape.txt.log
 
 if [ -f instances.list ]; then
   xargs -n1 -P$PROC -I % bash -c "crawl $INSTANCE %" < instances.list
