@@ -117,7 +117,7 @@ except:
 
 while line:
   divided = divide_line(line, ", ")
-  if divided is not None and len(divided) > 5:
+  if divided is not None and len(divided) > 4:
     uri = parse_str(divided[0]).replace('\x00','')
     if not re.match(r".+\..+", uri): continue
     status = divided[1]
