@@ -83,6 +83,8 @@ def update_status_down(uri, status):
   if get_exsistence(uri) != 1:
     return
 #    insert_uri(uri)
+  insert_updates = db.prepare("INSERT INTO updates VALUES ($1, now(), '?(down)')")
+  insert_updates(uri)
   update_list = db.prepare("UPDATE list SET status = $2 WHERE uri = $1")
   update_list(uri, status)
 
