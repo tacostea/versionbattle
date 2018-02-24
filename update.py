@@ -34,7 +34,7 @@ def get_exsistence(uri):
     return rows
 
 def get_version(uri):
-  get_list = db.prepare("SELECT version FROM list WHERE uri = $1")
+  get_list = db.prepare("SELECT version FROM updates WHERE uri = $1 AND verson <> '?(down)' ORDER BY updated DESC LIMIT 1")
   with db.xact():
     rows = 0
     for row in get_list(uri):
