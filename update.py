@@ -2,6 +2,9 @@ import re
 import time
 import postgresql
 import os.path as path
+from datetime import datetime
+from datetime import timedelta
+from datetime import time
 import pdb
 import fasteners
 # CHANGE LIBRALY
@@ -57,6 +60,47 @@ def get_mean_delay(uri, delay):
       else:
         return None
 
+def get_activity(uri):
+  get_list = db.prepare("SELECT to_char(uptime, 'YYYY-MM-DD HH24:MI:SS'), to_char(downtime, 'YYYY-MM-DD HH24:MM:SS') FROM activity WHERE uri = $1")
+  with db.xact():
+    for result in get_list(uri):
+      if result is not None:
+        return result
+      else:
+        db.prepare('INSERT INTO activity VALUES (uri, 0, 0, now())').first(uri)
+        return None
+
+def set_activity(uri, status):
+  activity = get_activity(uri)
+  if activity is not None:
+    if status == 'up':
+      uptime = datetime.strptime(activity['uptime'],'YYYY-MM-DD HH24:MI:SS')
+      + (datetime.datetime.now()
+      - datetime.strptime(activity['updated']),'YYYY-MM-DD HH24:MI:SS')
+      downtime = datetime.strptime(activity['downtime'], 'YYYY-MM-ED HH24:MI:SS')
+    else:
+      uptime = datetime.strptime(activity['uptime'], '')
+      downtime = datetime.strptime(activity['downtime'], 'YYYY-MM-DD HH24:MI:SS')
+      + (datetime.datetime.now()
+      - datetime.strptime(activity['updated'], 'YYYY-MM-DD HH24:MI:SS'))
+
+    update_list = db.prepare('UPDATE activity SET uptime = ape($2), downtime = age($3), updated = now() WHERE uri = $1')
+    update_list(uri, uptime, downtime)
+  return None
+
+def get_upratio(uri):
+  result = get_activity(uri)
+  uptime = datetime.strptime(result['uptime'], 'YYYY-MM-DD HH24:MI:SS')
+  downtime = datetime.strptime(result['downtime'], 'YYYY-MM-DD HH24:MI:SS')
+  print(uptime)
+  print(downtime)
+  totaltime = uptime + downtime
+  if result is None or totaltime == timedelta(0):
+    upratio = 0
+  else:
+    upratio = uptime / totaltime
+  return upratio
+
 def insert_uri(uri):
   if uri is None or uri == '':
     return
@@ -67,6 +111,7 @@ def insert_uri(uri):
 def update_status_up(uri, status, version, delay, ipv6):
   if get_exsistence(uri) != 1:
     return
+  set_activity(uri, 'Up')
 #    insert_uri(uri)
   delay = get_mean_delay(uri, delay)
   # if version are updated
@@ -79,13 +124,14 @@ def update_status_up(uri, status, version, delay, ipv6):
     insert_updates(uri, version)
   else:
     update_list = db.prepare("UPDATE list SET status = $2, version = $3, delay = $4, ipv6 = $5 WHERE uri = $1")
-  
-  update_list(uri, status, version, delay, ipv6)
 
+  update_list(uri, status, version, delay, ipv6)
+   
 # if status is Down
 def update_status_down(uri, status):
   if get_exsistence(uri) != 1:
     return
+  set_activity(uri, 'down')
 #    insert_uri(uri)
   insert_updates = db.prepare("INSERT INTO updates VALUES ($1, now(), '?(down)')")
   insert_updates(uri)
@@ -173,6 +219,7 @@ with fasteners.InterProcessLock(lockfile):
   
   with db.xact():
     for row in get_all_table():
+      uri = parse_str(row['uri'])
       registration = 'Open' if row['registration'] == True else 'Close'
       status = 'Up' if row['status'] == True else 'Down'
       version = '' if row["version"] == '0.0.0' else parse_str(row["version"])
@@ -180,9 +227,10 @@ with fasteners.InterProcessLock(lockfile):
       statuses = '' if row["statuses"] == -1 else parse_str(row["statuses"])
       connections = '' if row["connections"] == -1 else parse_str(row["connections"])
       delay = '' if row["delay"] is None else parse_str(round(row["delay"], 1))
+      upratio = parse_str(get_upratio(uri) * 100)
   
       f.write("<tr><td>" 
-      + parse_str(row["uri"]) + "</td><td>" 
+      + uri + "</td><td>" 
       + status + "</td><td>" 
       + version + "</td><td>" 
       + parse_str(row["updated"]).split('.')[0] + "</td><td>" 
@@ -192,7 +240,7 @@ with fasteners.InterProcessLock(lockfile):
       + registration + "</td><td>" 
       + parse_str(row["ipv6"]) + "</td><td>" 
       + delay + "</td><td>"
-      + "</td><td>"
+      + upratio + "</td><td>"
       + "</td></tr>\n"
       )
   f.close
