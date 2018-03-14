@@ -1,9 +1,15 @@
 #!/bin/bash
 
 ## CONFIG
+readonly LOCKFILE="crawl.lock"
 # MAX NUMBER OF PROCESSES FOR PARALLEL PROCESSING
-PROC=6
+PROC=20
 
+(
+flock -w 15 -x 200 || exit 1
+
+export RESULTFILE="result.tmp"
+export SCRAPEFILE="scrape.tmp"
 alias db="sudo -u postgres psql 1>/dev/null 2>/dev/null -U postgres -d instances -c "
 
 function scrape() {
@@ -36,11 +42,12 @@ function scrape() {
     CONNS=$(echo $RESULT | xmllint --html --xpath "/html/body/div/div[2]/div/div[1]/div[3]/strong" - 2>/dev/null | sed -e 's/<[^>]*>//g' | sed -e 's/[, ]//g')
   fi
 
-  echo "$DOMAIN, $USERS, $STATUSES, $CONNS, $REG" >> "scrape.txt"
+  echo "$DOMAIN, $USERS, $STATUSES, $CONNS, $REG" >> ${SCRAPEFILE}
 }
 export -f scrape
 
 function crawl() {
+  local BUF=""
   DOMAIN=$1
   if [ "$DOMAIN" == "" ]; then return 1; fi
   LINK="https://$DOMAIN/api/v1/instance"
@@ -57,16 +64,16 @@ function crawl() {
     # pass v4/v6
     if [ "$STATUS" == "200" ]; then
       if [[ ! "$VER" =~ [0-9]+(\.[0-9]+){2} ]]; then
-        echo "$DOMAIN, Up, 0.0.0, $TIME, v4/v6" >> result.txt
+        BUF="$DOMAIN, Up, 0.0.0, $TIME, v4/v6"
       else
-        echo "$DOMAIN, Up, $VER, $TIME, v4/v6" >> result.txt
+        BUF="$DOMAIN, Up, $VER, $TIME, v4/v6"
       fi
     # pass v6 only
     else
       if [[ ! "$VER" =~ [0-9]+(\.[0-9]+){2} ]]; then
-        echo "$DOMAIN, Up, 0.0.0, $TIME, v6" >> result.txt
+        BUF="$DOMAIN, Up, 0.0.0, $TIME, v6"
       else
-        echo "$DOMAIN, Up, $VER, $TIME, v6" >> result.txt
+        BUF="$DOMAIN, Up, $VER, $TIME, v6"
       fi
     fi
   # cannot pass v6
@@ -80,30 +87,35 @@ function crawl() {
       scrape $DOMAIN
       if [[ ! "$VER" =~ [0-9]+(\.[0-9]+){2} ]]; then
         if [ "$CODE" != "6" ]; then
-          echo "$DOMAIN, Up, 0.0.0, $TIME, v4/ex" >> result.txt
+          BUF="$DOMAIN, Up, 0.0.0, $TIME, v4/ex"
         else
-          echo "$DOMAIN, Up, 0.0.0, $TIME, v4" >> result.txt
+          BUF="$DOMAIN, Up, 0.0.0, $TIME, v4"
         fi
       else
         if [ "$CODE" != "6" ]; then
-          echo "$DOMAIN, Up, $VER, $TIME, v4/ex" >> result.txt
+          BUF="$DOMAIN, Up, $VER, $TIME, v4/ex"
         else
-          echo "$DOMAIN, Up, $VER, $TIME, v4" >> result.txt
+          BUF="$DOMAIN, Up, $VER, $TIME, v4"
         fi  
       fi
     # cannot connect
     else
       if [[ "$STATUS" =~ [0-9]{3} ]]; then
-        echo "$DOMAIN, Down, $STATUS" >> result.txt
+        BUF="$DOMAIN, Down, $STATUS"
       fi
     fi
+
+    echo $BUF >> ${RESULTFILE}
   fi
-  sort result.txt -o result.txt
 }
 export -f crawl
 
-mv result.txt result.txt.log
-mv scrape.txt scrape.txt.log
+if [ -e result.txt ];then
+  mv result.txt log/result.txt.$(date +%Y%m%d%H%M%S)
+fi
+if [ -e scrape.txt ];then
+  mv scrape.txt log/scrape.txt.$(date +%Y%m%d%H%M%S)
+fi
 
 if [ -f instances.list ]; then
   xargs -n1 -P$PROC -I % bash -c "crawl $INSTANCE %" < instances.list
@@ -113,3 +125,7 @@ else
   rm -f .instances.list
 fi
 
+sort $RESULTFILE -o result.txt
+mv $SCRAPEFILE scrape.txt
+
+) 200>$LOCKFILE

@@ -3,3 +3,6 @@ scrape.txt
 ~*
 _*
 *.secret
+log/*
+*.lock
+*.temp

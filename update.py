@@ -3,6 +3,7 @@ import time
 import postgresql
 import os.path as path
 import pdb
+import fasteners
 # CHANGE LIBRALY
 import psycopg2
 import psycopg2.extras
@@ -11,6 +12,9 @@ from distutils.version import StrictVersion
 from mastodon import Mastodon
 
 pattern_version = r"^[0-9]+(\.[0-9]+){2}$"
+lockfile = 'update.lock'
+resultfile = 'result.txt.log'
+scrapefile = 'scrape.txt.log'
 
 db = postgresql.open("pq://postgres@localhost/instances")
 mastodon = Mastodon(
@@ -34,7 +38,7 @@ def get_exsistence(uri):
     return rows
 
 def get_version(uri):
-  get_list = db.prepare("SELECT version FROM updates WHERE uri = $1 AND verson <> '?(down)' ORDER BY updated DESC LIMIT 1")
+  get_list = db.prepare("SELECT version FROM updates WHERE uri = $1 AND version <> '?(down)' ORDER BY updated DESC LIMIT 1")
   with db.xact():
     rows = 0
     for row in get_list(uri):
@@ -110,83 +114,86 @@ def divide_line(line, pattern):
   else:
     return None
 
-# update instance info from result.txt
-f = open('result.txt')
-try:
-  line = f.readline()
-except:
-  line = f.readline()
-
-while line:
-  divided = divide_line(line, ", ")
-  if divided is not None and len(divided) > 4:
-    uri = parse_str(divided[0]).replace('\x00','')
-    if not re.match(r".+\..+", uri): continue
-    status = divided[1]
-    if status == 'Up':
-      version = divided[2].strip() if divided[2].strip() != '0.0.0' else None
-      delay = float(divided[3])
-      ipv6 = divided[4].strip()
-      if not re.match(r".*[0-9x]$", ipv6): continue
-      update_status_up(uri, True, version, delay, ipv6)
-    else:
-      update_status_down(uri, False)
-
-  try:
-    line = f.readline()
-  # read more next line if exception has occured
-  except:
-    line = f.readline()
-  time.sleep(0.01)
-f.close
-
-# update scraped info
-if path.exists('scrape.txt'):
-  f=open('scrape.txt')
-  line = f.readline()
-  while line:
-    divided = divide_line(line, ",")
-    if divided is not None:
-      uri = divided[0]
+with fasteners.InterProcessLock(lockfile):
+  # update instance info from result.txt
+  if path.exists(resultfile):
+    f = open(resultfile)
+    try:
+      line = f.readline()
+    except:
+      line = f.readline()
+    
+    while line:
+      divided = divide_line(line, ", ")
+      if divided is not None and len(divided) > 4:
+        uri = parse_str(divided[0]).replace('\x00','')
+        if not re.match(r".+\..+", uri): continue
+        status = divided[1]
+        if status == 'Up':
+          version = divided[2].strip() if divided[2].strip() != '0.0.0' else None
+          delay = float(divided[3])
+          ipv6 = divided[4].strip()
+          if not re.match(r".*[0-9x]$", ipv6): continue
+          update_status_up(uri, True, version, delay, ipv6)
+        else:
+          update_status_down(uri, False)
+    
       try:
-        users = int(re.sub(r'^$', '-1', divided[1].replace(' ', '').replace('.','')))
-        statuses = int(re.sub(r'^$', '-1', divided[2].replace(' ', '').replace('.','')))
-        connections = int(re.sub(r'^$', '-1', divided[3].replace(' ', '').replace('.','')))
-        registration = bool(divided[4].replace('\n', ''))
+        line = f.readline()
+      # read more next line if exception has occured
       except:
-        pass
-      update_scraped(uri, users, statuses, connections, registration)
+        line = f.readline()
+      time.sleep(0.01)
+    f.close
+  
+  # update scraped info
+  if path.exists(scrapefile):
+    f=open(scrapefile)
     line = f.readline()
+    while line:
+      divided = divide_line(line, ",")
+      if divided is not None:
+        uri = divided[0]
+        try:
+          users = int(re.sub(r'^$', '-1', divided[1].replace(' ', '').replace('.','')))
+          statuses = int(re.sub(r'^$', '-1', divided[2].replace(' ', '').replace('.','')))
+          connections = int(re.sub(r'^$', '-1', divided[3].replace(' ', '').replace('.','')))
+          registration = bool(divided[4].replace('\n', ''))
+        except:
+          pass
+        update_scraped(uri, users, statuses, connections, registration)
+      line = f.readline()
+    f.close
+  
+  # update uptime info
+  
+  # write down table
+  f = open('table.html', 'w')
+  get_all_table = db.prepare("SELECT uri,status,version,updated,users,statuses,connections,registration,ipv6,delay FROM list order by uri")
+  
+  with db.xact():
+    for row in get_all_table():
+      registration = 'Open' if row['registration'] == True else 'Close'
+      status = 'Up' if row['status'] == True else 'Down'
+      version = '' if row["version"] == '0.0.0' else parse_str(row["version"])
+      users = '' if row["users"] == -1 else parse_str(row["users"])
+      statuses = '' if row["statuses"] == -1 else parse_str(row["statuses"])
+      connections = '' if row["connections"] == -1 else parse_str(row["connections"])
+      delay = '' if row["delay"] is None else parse_str(round(row["delay"], 1))
+  
+      f.write("<tr><td>" 
+      + parse_str(row["uri"]) + "</td><td>" 
+      + status + "</td><td>" 
+      + version + "</td><td>" 
+      + parse_str(row["updated"]).split('.')[0] + "</td><td>" 
+      + users + "</td><td>" 
+      + statuses + "</td><td>" 
+      + connections + "</td><td>" 
+      + registration + "</td><td>" 
+      + parse_str(row["ipv6"]) + "</td><td>" 
+      + delay + "</td><td>"
+      + "</td><td>"
+      + "</td></tr>\n"
+      )
   f.close
-
-# update uptime info
-
-# write down table
-f = open('table.html', 'w')
-get_all_table = db.prepare("SELECT uri,status,version,updated,users,statuses,connections,registration,ipv6,delay FROM list order by uri")
-
-with db.xact():
-  for row in get_all_table():
-    registration = 'Open' if row['registration'] == True else 'Close'
-    status = 'Up' if row['status'] == True else 'Down'
-    version = '' if row["version"] == '0.0.0' else parse_str(row["version"])
-    users = '' if row["users"] == -1 else parse_str(row["users"])
-    statuses = '' if row["statuses"] == -1 else parse_str(row["statuses"])
-    connections = '' if row["connections"] == -1 else parse_str(row["connections"])
-    delay = '' if row["delay"] is None else parse_str(round(row["delay"], 1))
-
-    f.write("<tr><td>" 
-    + parse_str(row["uri"]) + "</td><td>" 
-    + status + "</td><td>" 
-    + version + "</td><td>" 
-    + parse_str(row["updated"]).split('.')[0] + "</td><td>" 
-    + users + "</td><td>" 
-    + statuses + "</td><td>" 
-    + connections + "</td><td>" 
-    + registration + "</td><td>" 
-    + parse_str(row["ipv6"]) + "</td><td>" 
-    + delay + "</td><td>"
-    + "</td><td>"
-    + "</td></tr>\n"
-    )
-f.close
+  pass
