@@ -1,2 +1,2 @@
-egrep -E "[0-9]\.[0-9]\.[0-9]" result.txt | sort -k 3 -V | sed -r 's/^(.+), ([0-9]\.[0-9]\.[0-9](\.rc.)?).*, [0-9]+.*/\2/' | uniq -c | sed -r 's/(.+) (.+)/[\2]\1/'
+egrep -E "[0-9]\.[0-9]\.[0-9]" result.txt | sort -k 3 -V | sed -r 's/^(.+), ([0-9]\.[0-9]\.[0-9](.?rc.)?).*, [0-9]+.*/\2/' | uniq -c | sed -r 's/(.+) (.+)/[\2]\1/' | awk '{print sprintf("%-11s %d",$1,$2); a+=$2} END{print "collected n="a;}'
 #grep -E "[0-9]\.[0-9]\.[0-9]" result.txt | sort -k 3 -V | sed -r 's/^(.+), ([0-9]\.[0-9]\.[0-9].*), [0-9]+.*/\2/' | cut -c -5| uniq -c | sed -r 's/(.+) (.+)/[\2] \1/'
