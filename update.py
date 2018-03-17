@@ -13,8 +13,8 @@ from mastodon import Mastodon
 
 pattern_version = r"^[0-9]+(\.[0-9]+){2}$"
 lockfile = 'update.lock'
-resultfile = 'result.txt.log'
-scrapefile = 'scrape.txt.log'
+resultfile = 'result.txt'
+scrapefile = 'scrape.txt'
 
 db = postgresql.open("pq://postgres@localhost/instances")
 mastodon = Mastodon(
@@ -24,7 +24,7 @@ mastodon = Mastodon(
     )
 
 def get_watching_uri():
-  get_list = db.prepare("SELECT uri FROM list")
+  get_list = db.prepare("SELECT uri FROM target EXCEPT SELECT uri from disabled")
   with db.xact():
     for row in get_list():
      print(row["uri"])
