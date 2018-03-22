@@ -1,8 +1,7 @@
-result.txt
-scrape.txt
-~*
-_*
+*.txt
 *.secret
-log/*
 *.lock
 *.temp
+~*
+_*
+log/*

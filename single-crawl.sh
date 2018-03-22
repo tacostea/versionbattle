@@ -1,13 +1,5 @@
 #!/bin/bash
 
-## CONFIG
-readonly LOCKFILE="crawl.lock"
-# MAX NUMBER OF PROCESSES FOR PARALLEL PROCESSING
-PROC=10
-
-(
-flock -w 15 -x 200 || exit 1
-
 export RESULTFILE="result.tmp"
 export SCRAPEFILE="scrape.tmp"
 alias db="sudo -u postgres psql 1>/dev/null 2>/dev/null -U postgres -d instances -c "
@@ -110,25 +102,4 @@ function crawl() {
 }
 export -f crawl
 
-echo -n > $RESULTFILE
-echo -n > $SCRAPEFILE
-
-if [ -f instances.list ]; then
-  xargs -n1 -P$PROC -I % bash -c "crawl $INSTANCE %" < instances.list
-else
-  curl -s https://instances.mastodon.xyz/instances.json | jq -r '.[].name' > .instances.list
-  xargs -n1 -P$PROC -I % bash -c "crawl $INSTANCE %" < .instances.list
-  rm -f .instances.list
-fi
-
-if [ -e result.txt ];then
-  mv result.txt log/result.txt.$(date +%Y%m%d%H%M%S)
-fi
-if [ -e scrape.txt ];then
-  mv scrape.txt log/scrape.txt.$(date +%Y%m%d%H%M%S)
-fi
-
-sort -uk1,1 $RESULTFILE -o result.txt
-sort -uk1,1 $SCRAPEFILE -o scrape.txt
-
-) 200>$LOCKFILE
+crawl $1
