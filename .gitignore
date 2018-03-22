@@ -1,7 +1,9 @@
 *.txt
 *.secret
+*.list
 *.lock
-*.temp
+*.tmp
+*.html
 ~*
 _*
 log/*
