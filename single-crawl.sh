@@ -1,8 +1,10 @@
 #!/bin/bash
 
-export RESULTFILE="result.tmp"
-export SCRAPEFILE="scrape.tmp"
+RESULTFILE="result.tmp"
+SCRAPEFILE="scrape.tmp"
 alias db="sudo -u postgres psql 1>/dev/null 2>/dev/null -U postgres -d instances -c "
+
+DOMAIN=$1
 
 function scrape() {
   DOMAIN=$1
@@ -34,7 +36,7 @@ function scrape() {
     CONNS=$(echo $RESULT | xmllint --html --xpath "/html/body/div/div[2]/div/div[1]/div[3]/strong" - 2>/dev/null | sed -e 's/<[^>]*>//g' | sed -e 's/[, ]//g')
   fi
 
-  echo "$DOMAIN, $USERS, $STATUSES, $CONNS, $REG" >> ${SCRAPEFILE}
+  echo "$DOMAIN, $USERS, $STATUSES, $CONNS, $REG" >> "${SCRAPEFILE}"
 }
 export -f scrape
 
@@ -96,10 +98,9 @@ function crawl() {
         BUF="$DOMAIN, Down, $STATUS"
       fi
     fi
-
-    echo $BUF >> ${RESULTFILE}
   fi
+  echo "$BUF" >> "${RESULTFILE}"
 }
 export -f crawl
 
-crawl $1
+crawl $DOMAIN

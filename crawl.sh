@@ -104,9 +104,9 @@ function crawl() {
         BUF="$DOMAIN, Down, $STATUS"
       fi
     fi
-
-    echo $BUF >> ${RESULTFILE}
-  fi
+  fi # cannot pass v6 END
+  
+  echo $BUF >> ${RESULTFILE}
 }
 export -f crawl
 
