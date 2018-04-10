@@ -17,6 +17,7 @@ resultfile = 'result.txt'
 scrapefile = 'scrape.txt'
 
 db = postgresql.open("pq://postgres@localhost/instances")
+
 mastodon = Mastodon(
     client_id = 'pytooter_clientcred.secret',
     access_token = 'pytooter_usercred.secret',
@@ -73,7 +74,7 @@ def update_status_up(uri, status, version, delay, ipv6):
   old = get_version(uri).strip()
   if old == '0.0.0' : old = ''
   if old != version and version is not None:
-    mastodon.toot('[ Version Updated! ]\n' + uri + ' : '+ old + ' -> ' + version + '\n#Mastodon_Upgrade_Battle')
+    mastodon.toot('[ Version Updated! ]\n' + uri + ' : '+ old + ' -> ' + version + '\n#Mastodon_Upgrade_Battle #tacobot')
     update_list = db.prepare("UPDATE list SET status = $2, version = $3, delay = $4, ipv6 = $5, updated = now() WHERE uri = $1")
     insert_updates = db.prepare("INSERT INTO updates VALUES($1, now(), $2)") 
     insert_updates(uri, version)
