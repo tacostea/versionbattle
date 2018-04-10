@@ -122,10 +122,10 @@ else
 fi
 
 if [ -e result.txt ];then
-  mv result.txt log/result.txt.$(date +%Y%m%d%H%M%S)
+  cat result.txt >> log/result.txt && rm -f result.txt
 fi
 if [ -e scrape.txt ];then
-  mv scrape.txt log/scrape.txt.$(date +%Y%m%d%H%M%S)
+  cat scrape.txt >> log/scrape.txt && rm -f scrape.txt
 fi
 
 sort -uk1,1 $RESULTFILE -o result.txt
