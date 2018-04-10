@@ -4,6 +4,7 @@
 *.lock
 *.tmp
 *.html
+.*
 ~*
 _*
 log/*
