@@ -4,9 +4,11 @@ import postgresql
 import os.path as path
 import pdb
 import fasteners
-# CHANGE LIBRALY
+import time
 import psycopg2
 import psycopg2.extras
+
+from pprint import pprint
 
 from distutils.version import StrictVersion
 from mastodon import Mastodon
@@ -25,18 +27,10 @@ mastodon = Mastodon(
     )
 
 def get_watching_uri():
-  get_list = db.prepare("SELECT uri FROM target EXCEPT SELECT uri from disabled")
+  get_list = db.prepare("SELECT uri FROM target WHERE crawl = True")
   with db.xact():
     for row in get_list():
      print(row["uri"])
-
-def get_exsistence(uri):
-  get_list = db.prepare("SELECT uri FROM list WHERE uri = $1 EXCEPT SELECT uri FROM disabled WHERE uri = $1")
-  with db.xact():
-    rows = 0
-    for row in get_list( uri ):
-      rows += 1
-    return rows
 
 def get_version(uri):
   get_list = db.prepare("SELECT version FROM updates WHERE uri = $1 AND version <> '?(down)' ORDER BY updated DESC LIMIT 1")
@@ -49,6 +43,12 @@ def get_version(uri):
     else:
       return '0.0.0'
 
+def get_status(uri):
+  get_list = db.prepare("SELECT status FROM info WHERE uri = $1")
+  result = get_list(uri)
+  if len(result) == 1: return result[0][0]
+  else: return 'down'
+
 def get_mean_delay(uri, delay):
   get_list = db.prepare('SELECT delay FROM list WHERE uri = $1')
   with db.xact():
@@ -58,49 +58,56 @@ def get_mean_delay(uri, delay):
       else:
         return None
 
-def insert_uri(uri):
-  if uri is None or uri == '':
-    return
-  insert_list = db.prepare("INSERT INTO list(uri) VALUES($1)")
-  insert_list.first(uri)
-
 # if status is Up
 def update_status_up(uri, status, version, delay, ipv6):
-  if get_exsistence(uri) != 1:
-    return
-#    insert_uri(uri)
   delay = get_mean_delay(uri, delay)
-  # if version are updated
   old = get_version(uri).strip()
-  if old == '0.0.0' : old = ''
-  if old != version and version is not None:
-    mastodon.status_post('[ Versioni Updated! ]\n' + uri + ' : '+ old + ' -> ' + version + '\n#Mastodon_Upgrade_Battle #tacobot', visibility='unlisted')
-    update_list = db.prepare("UPDATE list SET status = $2, version = $3, delay = $4, ipv6 = $5, updated = now() WHERE uri = $1")
-    insert_updates = db.prepare("INSERT INTO updates VALUES($1, now(), $2)") 
-    insert_updates(uri, version)
-  else:
-    update_list = db.prepare("UPDATE list SET status = $2, version = $3, delay = $4, ipv6 = $5 WHERE uri = $1")
+  if old == '0.0.0' : old = '!FIRST FETCH!'
   
-  update_list(uri, status, version, delay, ipv6)
+  # if version are updated
+  if old != version and version is not None:
+    for i in range(10):
+      try:
+        mastodon.status_post('[ Version Updated! ]\n' + uri + ' : '+ old + ' -> ' + version + '\n#Mastodon_Upgrade_Battle #tacobot')
+        print('[ Version Updated! ]\n' + uri + ' : '+ old + ' -> ' + version + '\n#Mastodon_Upgrade_Battle #tacobot')
+        update_list = db.prepare("UPDATE list SET status = $2, version = $3, delay = $4, ipv6 = $5, updated = now() WHERE uri = $1")
+        update_info = db.prepare("UPDATE info SET status = $2, delay = $3, ipv6 = $4, updated = now() WHERE uri = $1")
+        insert_updates = db.prepare("INSERT INTO updates VALUES($1, now(), $2)") 
+
+        update_list(uri, status, version, delay, ipv6)
+        update_info(uri, "up", delay, ipv6)
+        insert_updates(uri, version)
+
+      except Exception as e:
+        print("exception " + str(e))
+        time.sleep(10)
+
+      else:
+        break
 
 # if status is Down
 def update_status_down(uri, status):
-  if get_exsistence(uri) != 1:
-    return
-#    insert_uri(uri)
   insert_updates = db.prepare("INSERT INTO updates VALUES ($1, now(), '?(down)')")
   insert_updates(uri)
   update_list = db.prepare("UPDATE list SET status = $2 WHERE uri = $1")
   update_list(uri, status)
+  update_info = db.prepare("UPDATE info SET status = 'down', updated = now() WHERE uri = $1")
+  update_info(uri)
 
 def update_scraped(uri, users, statuses, connections, registration):
   update_list = db.prepare("UPDATE list SET users = $2, statuses = $3, connections = $4, registration = $5 WHERE uri = $1")
+  update_info = db.prepare("UPDATE info SET users = $2, statuses = $3, connections = $4, registration = $5, updated = now() WHERE uri = $1")
   with db.xact():
+    update_info(uri, users, statuses, connections, registration)
     rows = 0
     for row in update_list(uri, users, statuses, connections, registration):
       rows += 1
     return 1
   # postgresql exception
+
+  update_info = db.prepare("UPDATE info SET users = $2, statuses = $3, connections = $4, registration = $5 WHERE uri = $1")
+  update_info(uri, users, statuses, connections, registration)
+  
   return 0
 
 def parse_str(obj):
@@ -123,22 +130,28 @@ with fasteners.InterProcessLock(lockfile):
       line = f.readline()
     except:
       line = f.readline()
-    
+
     while line:
       divided = divide_line(line, ", ")
       if divided is not None and len(divided) > 4:
         uri = parse_str(divided[0]).replace('\x00','')
         if not re.match(r".+\..+", uri): continue
         status = divided[1]
+        recorded_status = get_status(uri)
+
         if status == 'Up':
           version = divided[2].strip() if divided[2].strip() != '0.0.0' else None
           delay = float(divided[3])
           ipv6 = divided[4].strip()
           if not re.match(r".*[0-9x]$", ipv6): continue
+          query = db.prepare("UPDATE activity SET (updated, uptime) = (now(), uptime + age(now(), updated)) WHERE uri = $1")
           update_status_up(uri, True, version, delay, ipv6)
         else:
           update_status_down(uri, False)
-    
+          query = db.prepare("UPDATE activity SET (updated, downtime) = (now(), downtime + age(now(), updated))) WHERE uri = $1")
+        with db.xact():
+          query(uri)
+
       try:
         line = f.readline()
       # read more next line if exception has occured
