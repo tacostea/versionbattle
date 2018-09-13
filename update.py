@@ -69,7 +69,6 @@ def update_status_up(uri, status, version, delay, ipv6):
     for i in range(10):
       try:
         mastodon.status_post('[ Version Updated! ]\n' + uri + ' : '+ old + ' -> ' + version + '\n#Mastodon_Upgrade_Battle #tacobot')
-        print('[ Version Updated! ]\n' + uri + ' : '+ old + ' -> ' + version + '\n#Mastodon_Upgrade_Battle #tacobot')
         update_list = db.prepare("UPDATE list SET status = $2, version = $3, delay = $4, ipv6 = $5, updated = now() WHERE uri = $1")
         update_info = db.prepare("UPDATE info SET status = $2, delay = $3, ipv6 = $4, updated = now() WHERE uri = $1")
         insert_updates = db.prepare("INSERT INTO updates VALUES($1, now(), $2)") 
